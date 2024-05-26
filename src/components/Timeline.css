@@ -1,0 +1,107 @@
+.design-section {
+  font-family: 'Freeman', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  min-height: 100vh;
+  width: 60vw;
+  margin-top: 0vh;
+}
+
+.design-section-dark-mode h1{
+  color: white;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: slideInFromBottom 1s ease-out;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 4% auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content {
+  padding: 20px;
+  background: linear-gradient(0deg, #a6e1ff, #74c6ff);
+  -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+          box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+  border-radius: 5px;
+  padding: 1.75rem;
+  transition: 0.4s ease;
+  overflow-wrap: break-word !important;
+  margin: 1rem;
+  margin-bottom: 20px;
+  border-radius: 40px;
+}
+
+.timeline-content-dark {
+  background: linear-gradient(90deg, #f19af3, #f099b5);
+  box-shadow: 5px 5px 10px rgba(245, 73, 144, 0.5), -5px -5px 10px rgba(245, 73, 144, 0.5);
+  color: white; /* Added to change text color to white in dark mode */
+}
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, #ffeb3b, #ffec5c, #ffe67e);
+    box-shadow: 0 0 15px rgba(255, 235, 59, 1), 0 0 25px rgba(255, 236, 92, 0.9);
+    width: 5px;
+    height: 100%;
+  }
+  .main-middle {
+    opacity: 0;
+  }
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #ffeb3b, #ffec5c, #ffe67e);
+    box-shadow: 0 0 15px rgba(255, 235, 59, 1), 0 0 25px rgba(255, 236, 92, 0.9);    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+
+  .timeline-middle-dark {
+    background-image: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6);
+  }
+  
+  .timeline-circle-dark {
+    background-image: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: black;
+  }
+  
+  .timeline-component {
+    margin: 0px 40px 20px 40px;
+  }
+}

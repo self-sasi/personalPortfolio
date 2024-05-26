@@ -1,0 +1,135 @@
+/* WelcomeMessage.css */
+@keyframes slideInFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .welcome-message {
+    font-family: 'Freeman', sans-serif;
+    color: black;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .dark-mode .welcome-message {
+    color: white;
+  }
+  
+  .welcome-message h1 {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: slideInFromBottom 1s ease-out;
+  }
+  
+  .welcome-message p {
+    font-size: 1.5em;
+    animation: slideInFromBottom 1s ease-out;
+    animation-delay: 0.5s; /* Delay the paragraph animation */
+    opacity: 0; /* Ensure the paragraph is hidden until animation starts */
+    animation-fill-mode: forwards; /* Retain the final state of the animation */
+  }
+  
+  .button-container-horizontal {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    animation: slideInFromBottom 1s ease-out;
+    animation-delay: 1s; /* Delay the button container animation */
+    opacity: 0; /* Ensure the button container is hidden until animation starts */
+    animation-fill-mode: forwards; /* Retain the final state of the animation */
+  }
+  
+  .projects-button,
+  .resume-button,
+  .github-button,
+  .linkedin-button {
+    transition: all ease-in-out 0.2s;
+
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #f19af3, #f099b5);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2.5px 7.5px,
+      rgba(245, 73, 144, 0.5) 2.5px 5px 7.5px;
+  }
+
+  /* .dark-mode .projects-button,.dark-mode 
+  .resume-button,.dark-mode 
+  .github-button,.dark-mode 
+  .linkedin-button {
+    transition: all ease-in-out 0.2s;
+
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, #a6e1ff, #74c6ff);
+    box-shadow: rgba(102, 181, 255, 0.7) 0px 2px 7px,
+    rgba(102, 181, 255, 0.5) 2px 4.5px 7px;
+    
+  } */
+  
+  .projects-button,
+  .resume-button {
+    color: white; 
+    font-family: 'Freeman', sans-serif;
+    font-size: large;
+  }
+
+  /* .dark-mode .projects-button,
+  .dark-mode .resume-button {
+    color: white; 
+    font-family: 'Freeman', sans-serif;
+    font-size: large;
+  } */
+  
+  .projects-button .icon,
+  .resume-button .icon {
+    width: 1em;
+    height: 1em;
+    fill: white;
+    margin-left: 10px; /* Add margin to create spacing */
+  }
+  
+  .github-button .icon,
+  .linkedin-button .icon {
+    width: 1em;
+    height: 1em;
+    fill: white;
+  }
+
+  .projects-button:hover,
+  .resume-button:hover,
+  .github-button:hover,
+  .linkedin-button:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 4px 10px,
+                rgba(245, 73, 144, 0.6) 3.5px 7.5px 10px;
+  }
+
+  /* .dark-mode .projects-button:hover,.dark-mode 
+  .resume-button:hover,.dark-mode 
+  .github-button:hover,.dark-mode 
+  .linkedin-button:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(102, 181, 255, 1) 0px 3.5px 9.5px,
+    rgba(102, 181, 255, 0.9) 3px 7px 9.5px;
+  } */
+
+
+  
