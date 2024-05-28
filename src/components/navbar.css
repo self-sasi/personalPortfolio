@@ -44,7 +44,6 @@
   }
 }
 
-/* Ensure the button container is centered within the navbar container */
 .button-container {
   display: flex;
   background: linear-gradient(90deg, #f19af3, #f099b5);
@@ -87,7 +86,6 @@
   font-size: 25px;
 }
 
-/* Keep the theme switch aligned to the far right */
 .theme-switch-container {
   position: absolute;
   right: 20px;

@@ -18,8 +18,8 @@ function App() {
     setIsDarkMode(isChecked);
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  const scrollToWelcomeMessage = () => {
+    welcomeMessageRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToAboutMe = () => {
@@ -55,8 +55,8 @@ function App() {
 
     const observer = new IntersectionObserver(handleIntersection, {
       root: null,
-      rootMargin: '-15% 0px 0px 0px', // Trigger slightly before the element reaches the top
-      threshold: [0, 0.25], // Observe both entry and exit at specific thresholds
+      rootMargin: '-15% 0px 0px 0px', 
+      threshold: [0, 0.25], 
     });
 
     const sections = [
@@ -85,7 +85,7 @@ function App() {
   return (
     <div className="App">
       <div className="Navigation">
-        <Navbar onToggle={handleToggle} scrollToTop={scrollToTop} scrollToAboutMe={scrollToAboutMe} scrollToTimeline={scrollToTimeline} scrollToContact={scrollToContact} />
+        <Navbar onToggle={handleToggle} scrollToWelcomeMessage={scrollToWelcomeMessage} scrollToAboutMe={scrollToAboutMe} scrollToTimeline={scrollToTimeline} scrollToContact={scrollToContact} />
       </div>
       <div id="background-wrap">
         <div className="x1">
