@@ -61,7 +61,6 @@
   
   .checkbox-wrapper-5 .check input[type="checkbox"]:checked + label {
     background: transparent;
-    /* pink */
   }
   
   .checkbox-wrapper-5 .check label::before,
