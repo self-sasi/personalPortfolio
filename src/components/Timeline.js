@@ -18,7 +18,7 @@ const Timeline = ({ isDarkMode }) => {
         </div>
         <div className={`timeline-component timeline-content ${isDarkMode ? 'timeline-content-dark' : ''}`}>
           <h3>Software Research Assistant | University of Calgary</h3>
-          <p>Software Engineering Intern developing algorithms to analyze qubit min-entropy, enhancing applications in quantum information theory, cryptography, and computer science.</p>
+          <p>Software Engineering Research Assistant developing algorithms to analyze qubit min-entropy, enhancing applications in quantum information theory, cryptography, and computer science.</p>
         </div>
         <div className={`timeline-middle ${isDarkMode ? 'timeline-middle-dark' : ''}`}>
           <div className={`timeline-circle ${isDarkMode ? 'timeline-circle-dark' : ''}`}>
