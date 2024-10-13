@@ -1,0 +1,357 @@
+/* Existing styles */
+
+.projects-container {
+  padding: 20px;
+  font-family: 'Freeman', sans-serif;
+}
+
+/* Center the heading and set color */
+.projects-container h1 {
+  font-size: 4em;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #000; /* Default color for light mode */
+  animation: slideInFromBottom 1s ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.25s;
+  opacity: 0;
+}
+
+/* Dark mode heading color */
+body.dark-mode .projects-container h1 {
+  color: #fff;
+}
+
+/* Animation keyframes (if not already defined) */
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Updated styles for project-links */
+.project-links {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.project-links a svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  transition: transform 0.2s;
+}
+
+.project-links a svg:hover {
+  transform: scale(1.25);
+  fill: pink;
+}
+
+.project-info {
+  padding: 1rem;
+  position: relative;
+  width: 95%;
+  cursor: pointer;
+  z-index: 1;
+  color: #fff;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+body.dark-mode .project-info {
+  color: #fff;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.15) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.project-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px; /* Added margin for spacing */
+  color: goldenrod !important;
+}
+
+.project-description {
+  font-size: 1em;
+  line-height: 1.5; /* Improved line-height for readability */
+}
+
+/* Popup styles */
+.project-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  background-color: #fff;
+  width: 95%;
+  max-width: 1200px;
+  height: 90vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.popup-inner {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.popup-left {
+  flex: 2;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.popup-right {
+  flex: 1.5;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.popup-divider {
+  width: 1px;
+  background-color: #ccc;
+}
+
+.popup-left {
+  position: relative;
+  background-color: transparent;
+}
+
+.media-header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+body.dark-mode .media-header {
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+}
+
+.media-content {
+  margin-top: 10px;
+}
+
+.media-content img {
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.popup-right h2 {
+  margin-bottom: 20px;
+}
+
+.project-section {
+  margin-bottom: 30px; /* Increased margin for better vertical spacing */
+}
+
+.project-section h3 {
+  margin-bottom: 15px; /* Increased margin for subheadings */
+}
+
+.project-section p {
+  line-height: 1.8; /* Increased line-height for better readability */
+}
+
+.project-section a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+.project-section a:hover {
+  text-decoration: underline;
+}
+
+/* Tech stack styles */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-item {
+  background-color: #e0e0e0;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+body.dark-mode .tech-item {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Media Viewer Modal */
+.media-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+
+.media-viewer-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.media-viewer-content img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.media-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 50px;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+.media-nav.prev {
+  left: 0;
+}
+
+.media-nav.next {
+  right: 0;
+}
+
+body.dark-mode .media-nav {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .popup-inner {
+    flex-direction: column;
+  }
+
+  .popup-divider {
+    height: 1px;
+    width: 100%;
+  }
+
+  .popup-left,
+  .popup-right {
+    flex: none;
+    height: 50%;
+  }
+
+  .popup-left,
+  .popup-right {
+    padding: 10px;
+  }
+
+  .media-nav {
+    font-size: 40px;
+  }
+}
+
+/* Dark mode styles */
+body.dark-mode .popup-content {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .popup-divider {
+  background-color: #555;
+}
+
+body.dark-mode .close-button {
+  color: #fff;
+}
+
+body.dark-mode .project-popup {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+body.dark-mode .project-section a {
+  color: #add8e6;
+}
+
+body.dark-mode .media-viewer {
+  background-color: rgba(0, 0, 0, 0.95);
+}

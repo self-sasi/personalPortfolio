@@ -223,5 +223,9 @@ body.dark-mode .cloud {
   .fade-visible {
 	opacity: 1;
   }
+
+  .projectsDiv {
+	margin-top: 10vh;
+  }
   
   
