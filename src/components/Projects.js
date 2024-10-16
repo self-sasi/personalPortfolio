@@ -12,8 +12,10 @@ const Projects = () => {
       techStack: ['Django', 'SQLite', 'Angular', 'Tailwind CSS', 'ChatGPT'],
       image: '/talethread/logo.png',
       media: [
-        'https://gitmotion.app/api/gource/video/2118ed8c-5fa1-49ba-ac61-b4ae6c478216',
-        'https://via.placeholder.com/800x600?text=TaleThread+Screenshot+2',
+        '/talethread/gitmotion_talethread.mp4',
+        '/talethread/product-screenshot.png',
+        '/talethread/create-thread.png',
+        '/talethread/contribute.png',
       ],
       githubLink: 'https://github.com/self-sasi/TaleThread',
       externalLink: 'https://github.com/self-sasi/TaleThread',
@@ -27,8 +29,7 @@ const Projects = () => {
       techStack: ['Express.js', 'Angular', 'PrimeNG', 'PrimeFlex', 'MongoDB'],
       image: '/rootnode/UCalgary.png',
       media: [
-        'https://via.placeholder.com/800x600?text=Root+Node+Screenshot+1',
-        'https://via.placeholder.com/800x600?text=Root+Node+Screenshot+2',
+        '/rootnode/main-page.png',
       ],
       githubLink: 'https://github.com/yourusername/rootnode',
       externalLink: 'https://rootnode.example.com',
