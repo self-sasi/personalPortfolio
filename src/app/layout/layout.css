@@ -1,0 +1,106 @@
+/* Light translucent panel — minimal glass effect */
+.glass {
+  position: relative;
+  overflow: hidden;
+
+  /* mostly transparent, very light diffusion */
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  /* subtle boundary only */
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.10);
+}
+
+/* extremely subtle internal shading (almost flat) */
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      120% 90% at 20% 15%,
+      rgba(255, 255, 255, 0.10) 0%,
+      rgba(255, 255, 255, 0.00) 55%
+    );
+
+  box-shadow: inset 0 0.5px 0 rgba(255, 255, 255, 0.10);
+}
+
+/* content clarity */
+.glass > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Frosted card with very smooth hover (shadow + scale) */
+.sidebar {
+  position: relative;
+  padding: 28px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(26px) saturate(155%);
+  -webkit-backdrop-filter: blur(26px) saturate(155%);
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  box-shadow:
+    0 18px 48px rgba(0, 0, 0, 0.16),
+    0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+/* Left frosty -> right clear */
+.sidebar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.34) 0%,
+      rgba(255, 255, 255, 0.20) 28%,
+      rgba(255, 255, 255, 0.10) 55%,
+      rgba(255, 255, 255, 0.00) 78%
+    ),
+    radial-gradient(
+      120% 90% at 18% 18%,
+      rgba(255, 255, 255, 0.32) 0%,
+      rgba(255, 255, 255, 0.12) 35%,
+      rgba(255, 255, 255, 0.00) 70%
+    );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.10);
+
+  transition: opacity 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* subtle grain */
+.sidebar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E");
+
+  transition: opacity 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* keep content crisp */
+.sidebar > * {
+  position: relative;
+  z-index: 1;
+}
+

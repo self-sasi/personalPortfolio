@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Code New Roman";
+  src: url("/code_new_roman.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-family: "Code New Roman";
+}
+
+body {
+  background-color: #81B1FB;
+}   
+
