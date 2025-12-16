@@ -6,7 +6,7 @@
   padding: 28px;
   overflow: hidden;
 
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(20px) saturate(140%);
   -webkit-backdrop-filter: blur(20px) saturate(140%);
 
@@ -36,22 +36,22 @@
   background:
     radial-gradient(
       80% 120% at 18% 50%,
-      rgba(255, 255, 255, 0.30) 0%,
-      rgba(255, 255, 255, 0.20) 30%,
-      rgba(255, 255, 255, 0.08) 46%,
+      rgba(255, 255, 255, 0.20) 0%,
+      rgba(255, 255, 255, 0.12) 30%,
+      rgba(255, 255, 255, 0.03) 46%,
       rgba(255, 255, 255, 0.00) 62%
     ),
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.22) 0%,
-      rgba(255, 255, 255, 0.10) 28%,
-      rgba(255, 255, 255, 0.03) 42%,
+      rgba(255, 255, 255, 0.12) 0%,
+      rgba(255, 255, 255, 0.02) 28%,
+      rgba(255, 255, 255, 0.00) 42%,
       rgba(255, 255, 255, 0.00) 54%
     ),
     linear-gradient(
       120deg,
-      rgba(255, 255, 255, 0.18) 0%,
-      rgba(255, 255, 255, 0.08) 12%,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.00) 12%,
       rgba(255, 255, 255, 0.00) 28%
     );
 

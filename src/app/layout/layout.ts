@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Wave } from "../components/wave/wave";
+import { BubbleButton } from "../components/bubble-button/bubble-button";
 
 @Component({
   standalone: true,
   selector: 'app-layout',
-  imports: [CommonModule, RouterOutlet, Wave],
+  imports: [CommonModule, RouterOutlet, Wave, BubbleButton],
   templateUrl: './layout.html',
   styleUrl: './layout.css',
 })

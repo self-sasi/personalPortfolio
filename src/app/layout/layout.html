@@ -1,24 +1,31 @@
 <div class="fixed inset-x-0 bottom-0 -z-10 pointer-events-none">
-  <app-wave
-    *ngFor="let wave of waveLayers"
-    [height]="wave.height"
-    [color]="wave.color"
-    [animationDuration]="wave.duration"
-    [style.opacity]="wave.opacity"
-  ></app-wave>
+  @for (wave of waveLayers; track $index) {
+    <app-wave
+      [height]="wave.height"
+      [color]="wave.color"
+      [animationDuration]="wave.duration"
+      [style.opacity]="wave.opacity"
+    ></app-wave>
+  }
 </div>
 
 
-<div class="grid grid-cols-9 justify-center h-screen ">
+<div class="grid grid-cols-9 justify-center h-screen mx-auto w-full max-w-screen-2xl">
 
   <!-- navbar (sidebar) -->
-  <div class="hidden lg:block xl:block 2xl:block col-span-2 sidebar">
-    navbar
+  <div class="hidden lg:block xl:block 2xl:block col-span-2 p-3 h-screen">
+    <div class="sidebar h-full">
+      navbar
+    </div>
   </div>
 
   <!-- body -->
-  <div class="col-span-9 sm:col-span-9 md:col-span-9 lg:col-span-7 xl:col-span-7 2xl:col-span-7">
+  <div class="col-span-9 sm:col-span-9 md:col-span-9 lg:col-span-7 xl:col-span-7 2xl:col-span-7 overflow-scroll">
     <router-outlet/>
   </div>
 
+</div>
+
+<div class="fixed bottom-0 p-3 flex w-full md:hidden lg:hidden xl:hidden 2xl:hidden justify-center">
+    <app-bubble-button></app-bubble-button>
 </div>
