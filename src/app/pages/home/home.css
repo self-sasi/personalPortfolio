@@ -83,3 +83,22 @@
     cursor: grabbing;
   }
 }
+
+.card-shell {
+  position: relative;
+  transition: top 250ms ease, left 250ms ease, width 250ms ease, height 250ms ease;
+}
+
+.has-active {
+  position: relative;
+}
+
+.has-active .card-shell {
+  display: none;
+}
+
+.has-active .card-shell.is-active-card {
+  display: block;
+  position: absolute;
+  z-index: 10;
+}

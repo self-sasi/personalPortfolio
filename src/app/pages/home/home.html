@@ -1,36 +1,78 @@
 
-<div class="grid grid-cols-12">
-    <div class="sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3 p-3 cursor-pointer">
+<div #grid class="grid grid-cols-12" [class.has-active]="activeCardId()">
+    <div
+        #aboutCard
+        class="card-shell p-3 col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3"
+        [class.is-active-card]="activeCardId() === 'about'"
+        [ngStyle]="activeCardId() === 'about' ? activeStyle() : null"
+        (click)="openCard('about', aboutCard, grid)"
+        (transitionend)="onCardTransitionEnd('about')"
+    >
         <app-card class="">
             <h1 class="text-xl pb-2.5">About Me</h1>
-            <p class="text-xs"> 
-                Hi! My name is Sarthak. I'm a Computer Science student passionate about developing software. 
-            </p>
+            @if (activeCardId() == 'about') {
+                <p class="text-xs"> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nemo saepe libero error, commodi labore deserunt suscipit doloremque quia molestiae, ducimus perferendis expedita ab voluptas? Ipsam, consectetur hic! Possimus, modi repellendus animi consectetur voluptate, veritatis tempora iusto, laboriosam pariatur velit eius in dignissimos perferendis nisi quibusdam nam quae ullam ratione!
+                </p>
+            } @else {
+                <p class="text-xs"> 
+                    Hi! My name is Sarthak. I'm a Computer Science student passionate about developing software. 
+                </p>
+            }
+
         </app-card>
     </div>
 
-    <div class="sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3 p-3 cursor-pointer">
+    <div
+        #skillsCard
+        class="card-shell p-3 col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-3 xl:col-span-3"
+        [class.is-active-card]="activeCardId() === 'skills'"
+        [ngStyle]="activeCardId() === 'skills' ? activeStyle() : null"
+        (click)="openCard('skills', skillsCard, grid)"
+        (transitionend)="onCardTransitionEnd('skills')"
+    >
         <app-card>
             <p class="text-xl"> Skills </p>
             <p class="text-xs"> These are my skills </p>
         </app-card>
     </div>
 
-    <div class="sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6 p-3 cursor-pointer">
+    <div
+        #githubCard
+        class="card-shell p-3 col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6"
+        [class.is-active-card]="activeCardId() === 'github'"
+        [ngStyle]="activeCardId() === 'github' ? activeStyle() : null"
+        (click)="openCard('github', githubCard, grid)"
+        (transitionend)="onCardTransitionEnd('github')"
+    >
         <app-card>
             <p class="text-xl"> Github </p>
             <img src="https://ghchart.rshah.org/self-sasi" alt="2016rshah's Github chart" />
         </app-card>
     </div>
 
-    <div class="sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6 p-3 cursor-pointer">
+    <div
+        #experienceCard
+        class="card-shell p-3 col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6"
+        [class.is-active-card]="activeCardId() === 'experience'"
+        [ngStyle]="activeCardId() === 'experience' ? activeStyle() : null"
+        (click)="openCard('experience', experienceCard, grid)"
+        (transitionend)="onCardTransitionEnd('experience')"
+    >
         <app-card>
             <p class="text-xl"> Experience </p>
             <!-- <app-experience-timeline/> -->
         </app-card>
     </div>
 
-    <div class="sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6 p-3 cursor-pointer">
+    <div
+        #projectsCard
+        class="card-shell p-3 col-span-12 sm:col-span-12 md:col-span-12 lg:col-span-6 xl:col-span-6"
+        [class.is-active-card]="activeCardId() === 'projects'"
+        [ngStyle]="activeCardId() === 'projects' ? activeStyle() : null"
+        (click)="openCard('projects', projectsCard, grid)"
+        (transitionend)="onCardTransitionEnd('projects')"
+    >
         <app-card>
             <p class="text-xl"> Projects </p>
             <p class="text-xs"> These are my projects </p>
