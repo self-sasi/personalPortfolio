@@ -1,11 +1,51 @@
-// ThemeButton.tsx
-import React from "react";
+"use client";
+
+import * as React from "react";
+import { useTheme } from "next-themes";
 import "./theme-button.css";
 
 export function ThemeButton() {
+  const { theme, resolvedTheme, systemTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  const prevSystemThemeRef = React.useRef<"light" | "dark" | undefined>(
+    undefined
+  );
+
+  React.useEffect(() => setMounted(true), []);
+
+  React.useEffect(() => {
+    if (!mounted) return;
+    if (!systemTheme) return;
+
+    const prev = prevSystemThemeRef.current;
+    prevSystemThemeRef.current = systemTheme;
+
+    if (!prev) return;
+
+    if (prev !== systemTheme) {
+      setTheme("system");
+    }
+  }, [systemTheme, mounted, setTheme]);
+
+  const effectiveTheme =
+    theme === "system" ? systemTheme : resolvedTheme;
+
+  const isDark = mounted && effectiveTheme === "dark";
+
+  function handleToggle(e: React.ChangeEvent<HTMLInputElement>) {
+    setTheme(e.target.checked ? "dark" : "light");
+  }
+
   return (
     <label className="switch">
-      <input id="input" type="checkbox" defaultChecked />
+      <input
+        id="input"
+        type="checkbox"
+        checked={!!isDark}
+        onChange={handleToggle}
+        aria-label="Toggle theme"
+      />
       <div className="slider round">
         <div className="sun-moon">
           <svg id="moon-dot-1" className="moon-dot" viewBox="0 0 100 100">

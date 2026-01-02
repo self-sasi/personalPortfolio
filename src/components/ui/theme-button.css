@@ -1,11 +1,12 @@
-/* ThemeButton.css */
 :root {
   --scale: 1.5;
   color-scheme: light;
 }
-:root:has(input:checked) {
+
+html.dark {
   color-scheme: dark;
 }
+
 
 .switch {
   position: relative;
