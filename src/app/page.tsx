@@ -1,33 +1,15 @@
-"use client";
-
 import { AboutCard } from "@/components/ui/about-card";
 import { ExperienceCard } from "@/components/ui/experience-card";
 import { ImageCard } from "@/components/ui/image-card";
 import { SkillCard } from "@/components/ui/skill-card";
 import { ProjectCard } from "@/components/ui/project-card";
-import { SearchBar } from "@/components/ui/search-bar";
-import { SearchCommand } from "@/components/ui/search-command";
 import { SocialCard } from "@/components/ui/social-card";
 import { ThemeCard } from "@/components/ui/theme-card";
-import React from "react";
 import { PhCard } from "@/components/ui/ph-card";
 
 export default function Home() {
-  const [open, setOpen] = React.useState(false);
 
   return (
-    <div className="min-h-dvh">
-      <SearchCommand open={open} onOpenChange={setOpen} />
-
-      {/* content display div */}
-      <div className="mx-auto w-full max-w-6xl p-4">
-
-        {/* top search bar div  */}
-        <div className="flex w-full justify-center">
-          <SearchBar onOpen={() => setOpen(true)} className="w-full max-w-md" />
-        </div>
-
-        {/* card holder div */}
         <div className="grid grid-cols-12 pt-8 gap-4">
 
           {/* about me card */}
@@ -76,7 +58,5 @@ export default function Home() {
             <ExperienceCard />
           </div>
         </div>
-      </div>
-    </div>
   );
 }

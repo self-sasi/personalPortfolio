@@ -10,14 +10,18 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRightIcon } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export function ExperienceCard() {
+  const router = useRouter()
+  
   return (
     <Card className="bg-primary-aqua text-primary-aqua-foreground h-full">
       <CardHeader>
         <CardTitle>Experience</CardTitle>
         <CardAction>
-          <Button variant="outline" size="icon" className="rounded-full text-primary-aqua-foreground!  border-primary-aqua-foreground! hover:bg-primary-aqua-foreground/20! cursor-pointer">
+          <Button variant="outline" size="icon" className="rounded-full text-primary-aqua-foreground!  border-primary-aqua-foreground! hover:bg-primary-aqua-foreground/20! cursor-pointer"
+          onClick={() => router.push('/experience')}>
             <ArrowUpRightIcon />
           </Button>
         </CardAction>
