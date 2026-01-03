@@ -46,6 +46,12 @@
   --color-primary-aqua-foreground: rgb(var(--primary-aqua-foreground));
   --color-primary-lavender: rgb(var(--primary-lavender));
   --color-primary-lavender-foreground: rgb(var(--primary-lavender-foreground));
+  --color-primary-red: rgb(var(--primary-red));
+  --color-primary-red-foreground: rgb(var(--primary-red-foreground));
+  --color-primary-indigo-vivid: rgb(var(--primary-indigo-vivid));
+  --color-primary-indigo-vivid-foreground: rgb(var(--primary-indigo-vivid-foreground));
+  --color-primary-pink-vivid: rgb(var(--primary-pink-vivid));
+  --color-primary-pink-vivid-foreground: rgb(var(--primary-pink-vivid-foreground));
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -82,6 +88,12 @@
   --primary-aqua-foreground: 20 20 20;
   --primary-lavender: 215 187 248;
   --primary-lavender-foreground: 20 20 20;
+  --primary-red: 255 86 86;
+  --primary-red-foreground: 255 255 255;
+  --primary-indigo-vivid: 105 114 254;
+  --primary-indigo-vivid-foreground: 255 255 255;
+  --primary-pink-vivid: 254 124 177;
+  --primary-pink-vivid-foreground: 20 20 20;
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
@@ -129,6 +141,12 @@
   --primary-aqua-foreground: 20 20 20;
   --primary-lavender: 215 187 248;
   --primary-lavender-foreground: 20 20 20;
+  --primary-red: 255 86 86;
+  --primary-red-foreground: 255 255 255;
+  --primary-indigo-vivid: 105 114 254;
+  --primary-indigo-vivid-foreground: 255 255 255;
+  --primary-pink-vivid: 254 124 177;
+  --primary-pink-vivid-foreground: 20 20 20;
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.371 0 0);
