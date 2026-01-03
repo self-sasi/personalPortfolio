@@ -15,6 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { Github } from "lucide-react";
 
 type CardColor =
+  | "default"
   | "yellow"
   | "turquoise"
   | "azure"
@@ -23,7 +24,8 @@ type CardColor =
   | "lavender"
   | "red"
   | "indigo-vivid"
-  | "pink-vivid";
+  | "pink-vivid"
+  | "mint";
 
 type ProjectDisplayCardProps = {
   title: string;
@@ -31,7 +33,7 @@ type ProjectDisplayCardProps = {
   body: string;
   imageSrc: string;
   imageAlt?: string;
-  tech: readonly string[]; // ✅ change here
+  tech: readonly string[];
   color: CardColor;
   href?: string;
   horizontal: boolean;
@@ -42,6 +44,14 @@ const COLOR_CLASS: Record<
   CardColor,
   { bg: string; fg: string; button: string; badge: string }
 > = {
+  default: {
+    bg: "dark",
+    fg: "",
+    button:
+      "",
+    badge:
+      "",
+  },
   yellow: {
     bg: "bg-primary-yellow",
     fg: "text-primary-yellow-foreground",
@@ -114,6 +124,14 @@ const COLOR_CLASS: Record<
     badge:
       "border-primary-pink-vivid-foreground/30 text-primary-pink-vivid-foreground bg-transparent",
   },
+  mint: {
+    bg: "bg-primary-mint",
+    fg: "text-primary-mint-foreground",
+    button:
+      "text-primary-mint-foreground! border-primary-mint-foreground! hover:bg-primary-mint-foreground/20!",
+    badge:
+      "border-primary-mint-foreground/30 text-primary-mint-foreground bg-transparent",
+  },
 };
 
 export function ProjectDisplayCard({
@@ -168,7 +186,7 @@ export function ProjectDisplayCard({
           />
         </div>
 
-        <p className="text-sm leading-relaxed opacity-90">{body}</p>
+        <p className="text-sm leading-relaxed whitespace-pre-line">{body}</p>
       </CardContent>
 
       {/* Tech badges */}
@@ -188,7 +206,7 @@ export function ProjectDisplayCard({
         <img
           src={imageSrc}
           alt="Banner"
-          className="w-full aspect-5/6 overflow-hidden"
+          className="w-full h-full object-cover block"
         />
       </div>
       <Card className={`w-1/2 ${reversed ? "rounded-r-none" : "rounded-l-none"} ${c.bg} ${c.fg}`}>
@@ -219,7 +237,7 @@ export function ProjectDisplayCard({
 
         {/* Long description */}
         <CardContent className="pt-0 flex-1">
-          <p className="text-sm leading-relaxed opacity-90">{body}</p>
+          <p className="text-sm leading-relaxed whitespace-pre-line">{body}</p>
         </CardContent>
 
         {/* Tech badges */}

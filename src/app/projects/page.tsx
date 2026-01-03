@@ -3,30 +3,30 @@ import { ProjectDisplayCard } from "@/components/ui/project-display-card";
 const PROJECTS = [
   {
     title: "Monkey Interpretter",
-    subtitle: "Generative gradients + motion",
-    body: "I built this to explore how far you can push CSS gradients and subtle motion before it becomes distracting. The goal was a background system that feels alive but stays readable for real UI.",
-    imageSrc: "https://picsum.photos/200/300",
-    tech: ["Next.js", "Tailwind", "Framer Motion"],
+    subtitle: "An interpreter for a toy programming language called monkey",
+    body: "An interpreter for a toy programming language, implemented from the ground up in Go. I started it after I couldn’t get into my university’s compilers course, which is why I decided to learn the subject independently through this project.",
+    imageSrc: "/mi-cover.png",
+    tech: ["Go"],
     color: "aqua",
-    href: "/projects/fluid-gradient-flow",
+    href: "https://github.com/self-sasi/monkey-interpreter",
     horizontal: false,
     reversed: false
   },
   {
-    title: "Neon Dashboard",
+    title: "TaleThread",
     subtitle: "Analytics UI with a clean data story",
-    body: "The motivation here was to practice presenting dense metrics without overwhelming the user. I focused on hierarchy, whitespace, and fast navigation patterns so you can scan and act quickly.",
-    imageSrc: "https://picsum.photos/id/237/200/300",
+    body: "A social media platform that allows users to collaboratively write stories and poems. \n\nUsers can start new threads, contribute to existing ones, rate contributions, and make friends with fellow writers. The platform encourages creativity and community engagement among writers of all levels. \n\nAdditional features include personalized writing prompts, genre-specific communities, and integration with AI tools for inspiration.",
+    imageSrc: "/tt-logo.png",
     tech: ["React", "shadcn/ui", "Recharts"],
-    color: "lavender",
+    color: "indigo-vivid",
     href: "/projects/neon-dashboard",
     horizontal: true,
     reversed: false
   },
   {
-    title: "Playful Landing Page",
-    subtitle: "High-conversion layout experiments",
-    body: "I wanted to iterate on a landing page system where sections snap into place, CTA buttons feel responsive, and the visuals remain consistent across screen sizes. This became a mini design system.",
+    title: "Loda Page",
+    subtitle: "ma ka loda",
+    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, quam ducimus odio eveniet expedita minus sapiente harum voluptatem repellat modi.",
     imageSrc: "https://picsum.photos/id/250/200/300",
     tech: ["Next.js", "TypeScript", "Tailwind"],
     color: "red",
@@ -34,13 +34,24 @@ const PROJECTS = [
     horizontal: true,
     reversed: true
   },
-  {
-    title: "Playful Landing Page",
-    subtitle: "High-conversion layout experiments",
-    body: "I wanted to iterate on a landing page system where sections snap into place, CTA buttons feel responsive, and the visuals remain consistent across screen sizes. This became a mini design system.",
+  // {
+  //   title: "Playful Landing Page",
+  //   subtitle: "High-conversion layout experiments",
+  //   body: "I wanted to iterate on a landing page system where sections snap into place, CTA buttons feel responsive, and the visuals remain consistent across screen sizes. This became a mini design system.",
+  //   imageSrc: "https://cdn.shadcnstudio.com/ss-assets/components/card/image-2.png?height=280&format=auto",
+  //   tech: ["Next.js", "TypeScript", "Tailwind"],
+  //   color: "yellow",
+  //   href: "/projects/playful-landing",
+  //   horizontal: false,
+  //   reversed: false
+  // },
+    {
+    title: "Hee Hee Hee Haw",
+    subtitle: "ok",
+    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, quam ducimus odio eveniet expedita minus sapiente harum voluptatem repellat modi.",
     imageSrc: "https://cdn.shadcnstudio.com/ss-assets/components/card/image-2.png?height=280&format=auto",
     tech: ["Next.js", "TypeScript", "Tailwind"],
-    color: "yellow",
+    color: "mint",
     href: "/projects/playful-landing",
     horizontal: false,
     reversed: false

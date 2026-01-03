@@ -1,40 +1,14 @@
 "use client";
 
 import * as React from "react";
-import { useTheme } from "next-themes";
-import "./theme-button.css";
+import "@/components/ui/theme-button.css";
+import { useThemeActions } from "@/components/use-theme-actions";
 
 export function ThemeButton() {
-  const { theme, resolvedTheme, systemTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = React.useState(false);
-
-  const prevSystemThemeRef = React.useRef<"light" | "dark" | undefined>(
-    undefined
-  );
-
-  React.useEffect(() => setMounted(true), []);
-
-  React.useEffect(() => {
-    if (!mounted) return;
-    if (!systemTheme) return;
-
-    const prev = prevSystemThemeRef.current;
-    prevSystemThemeRef.current = systemTheme;
-
-    if (!prev) return;
-
-    if (prev !== systemTheme) {
-      setTheme("system");
-    }
-  }, [systemTheme, mounted, setTheme]);
-
-  const effectiveTheme =
-    theme === "system" ? systemTheme : resolvedTheme;
-
-  const isDark = mounted && effectiveTheme === "dark";
+  const { isDark, setDark, setLight } = useThemeActions();
 
   function handleToggle(e: React.ChangeEvent<HTMLInputElement>) {
-    setTheme(e.target.checked ? "dark" : "light");
+    e.target.checked ? setDark() : setLight();
   }
 
   return (

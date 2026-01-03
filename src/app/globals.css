@@ -52,6 +52,8 @@
   --color-primary-indigo-vivid-foreground: rgb(var(--primary-indigo-vivid-foreground));
   --color-primary-pink-vivid: rgb(var(--primary-pink-vivid));
   --color-primary-pink-vivid-foreground: rgb(var(--primary-pink-vivid-foreground));
+  --color-primary-mint: rgb(var(--primary-mint));
+  --color-primary-mint-foreground: rgb(var(--primary-mint-foreground));
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
@@ -89,11 +91,13 @@
   --primary-lavender: 215 187 248;
   --primary-lavender-foreground: 20 20 20;
   --primary-red: 255 86 86;
-  --primary-red-foreground: 255 255 255;
+  --primary-red-foreground: 20 20 20;
   --primary-indigo-vivid: 105 114 254;
   --primary-indigo-vivid-foreground: 255 255 255;
   --primary-pink-vivid: 254 124 177;
   --primary-pink-vivid-foreground: 20 20 20;
+  --primary-mint: 96 203 160;
+  --primary-mint-foreground: 20 20 20;
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
@@ -147,6 +151,8 @@
   --primary-indigo-vivid-foreground: 255 255 255;
   --primary-pink-vivid: 254 124 177;
   --primary-pink-vivid-foreground: 20 20 20;
+  --primary-mint: 96 203 160;
+  --primary-mint-foreground: 10 35 30;
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.371 0 0);

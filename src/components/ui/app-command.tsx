@@ -12,14 +12,18 @@ import {
   CommandShortcut,
   CommandDialog,
 } from "@/components/ui/command";
-import { Briefcase, Calculator, Calendar, CodeSquare, CreditCard, FolderGit2, Home, Moon, Settings, Smile, Sun, User } from "lucide-react";
+import { Briefcase, CodeSquare, FolderGit2, Home, Moon, Smile, Sun } from "lucide-react";
+import { useThemeActions } from "@/components/use-theme-actions";
+import { useRouter } from "next/navigation";
 
-type SearchCommandProps = {
+type AppCommandProps = {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 };
 
-export function SearchCommand({ open, onOpenChange }: SearchCommandProps) {
+export function AppCommand({ open, onOpenChange }: AppCommandProps) {
+  const router = useRouter();
+  
   React.useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
@@ -31,6 +35,17 @@ export function SearchCommand({ open, onOpenChange }: SearchCommandProps) {
     return () => document.removeEventListener("keydown", handler);
   }, [open, onOpenChange]);
 
+  const run = (action: () => void) => {
+    onOpenChange(false);
+    action();
+  }
+
+  const routeTo = (path: string) => {
+    run(() => router.push(path));
+  }
+
+  const { setDark, setLight } = useThemeActions();
+
   return (
     <CommandDialog open={open} onOpenChange={onOpenChange} title="Command" description="Type a command or search...">
       <Command>
@@ -39,11 +54,11 @@ export function SearchCommand({ open, onOpenChange }: SearchCommandProps) {
           <CommandEmpty>No results found.</CommandEmpty>
 
           <CommandGroup heading="Theme">
-            <CommandItem>
+            <CommandItem onSelect={() => run(setLight)}>
               <Sun />
               <span>Light</span>
             </CommandItem>
-            <CommandItem>
+            <CommandItem onSelect={() => run(setDark)}>
               <Moon />
               <span>Dark</span>
             </CommandItem>
@@ -52,27 +67,27 @@ export function SearchCommand({ open, onOpenChange }: SearchCommandProps) {
           <CommandSeparator />
 
           <CommandGroup heading="Pages">
-            <CommandItem>
+            <CommandItem onSelect={() => routeTo('/')}>
               <Home />
               <span>Home</span>
               <CommandShortcut>⌘H</CommandShortcut>
             </CommandItem>
-            <CommandItem>
+            <CommandItem onSelect={() => routeTo('/about')}>
               <Smile />
               <span>About Me</span>
               <CommandShortcut>⌘M</CommandShortcut>
             </CommandItem>
-            <CommandItem>
+            <CommandItem onSelect={() => routeTo('/skills')}>
               <CodeSquare />
               <span>Skills</span>
               <CommandShortcut>⌘I</CommandShortcut>
             </CommandItem>
-            <CommandItem>
+            <CommandItem onSelect={() => routeTo('/projects')}>
               <FolderGit2 />
               <span>Projects</span>
               <CommandShortcut>⌘P</CommandShortcut>
             </CommandItem>
-            <CommandItem>
+            <CommandItem onSelect={() => routeTo('/experience')}>
               <Briefcase />
               <span>Experience</span>
               <CommandShortcut>⌘Y</CommandShortcut>
