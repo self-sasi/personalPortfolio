@@ -160,7 +160,7 @@ export function ProjectDisplayCard({
       {/* Long description */}
       <CardContent className="pt-0 flex-1">
         {/* Image */}
-        <div className="px-6 pb-4">
+        <div className="px-0 pb-4">
           <img
             src={imageSrc}
             alt={imageAlt}
@@ -186,9 +186,9 @@ export function ProjectDisplayCard({
     <Card className={`w-full h-full p-0 ${reversed ? "flex-row-reverse" : "flex-row"} gap-0`}>
       <div className="w-1/2">
         <img
-          src="https://cdn.shadcnstudio.com/ss-assets/components/card/image-3.png"
+          src={imageSrc}
           alt="Banner"
-          className="size-full overflow-hidden"
+          className="w-full aspect-5/6 overflow-hidden"
         />
       </div>
       <Card className={`w-1/2 ${reversed ? "rounded-r-none" : "rounded-l-none"} ${c.bg} ${c.fg}`}>
