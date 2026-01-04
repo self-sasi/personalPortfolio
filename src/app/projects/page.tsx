@@ -10,18 +10,45 @@ const PROJECTS = [
     color: "aqua",
     href: "https://github.com/self-sasi/monkey-interpreter",
     horizontal: false,
-    reversed: false
+    reversed: false,
+    xl: false,
+  },
+  {
+    title: "simple-ui",
+    subtitle: "A UI library that provides easy-to-use components",
+    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, quam ducimus odio eveniet expedita minus sapiente harum voluptatem repellat modi.",
+    imageSrc: "https://images.unsplash.com/photo-1579403124614-197f69d8187b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c29mdHdhcmUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D",
+    tech: ["Next.js", "TypeScript", "Tailwind"],
+    color: "azure",
+    href: "/projects/playful-landing",
+    horizontal: true,
+    reversed: true,
+    xl: false,
   },
   {
     title: "TaleThread",
     subtitle: "Analytics UI with a clean data story",
     body: "A social media platform that allows users to collaboratively write stories and poems. \n\nUsers can start new threads, contribute to existing ones, rate contributions, and make friends with fellow writers. The platform encourages creativity and community engagement among writers of all levels. \n\nAdditional features include personalized writing prompts, genre-specific communities, and integration with AI tools for inspiration.",
-    imageSrc: "/tt-logo.png",
+    imageSrc: "/logo.jpeg",
     tech: ["React", "shadcn/ui", "Recharts"],
     color: "indigo-vivid",
     href: "/projects/neon-dashboard",
     horizontal: true,
-    reversed: false
+    reversed: false,
+    xl: false,
+  },
+  {
+    title: "Hee Hee Hee Haw",
+    subtitle: "ok",
+    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, quam ducimus odio eveniet expedita minus sapiente harum voluptatem repellat modi.",
+    imageSrc:
+      "https://cdn.shadcnstudio.com/ss-assets/components/card/image-2.png?height=280&format=auto",
+    tech: ["Next.js", "TypeScript", "Tailwind"],
+    color: "red",
+    href: "/projects/playful-landing",
+    horizontal: false,
+    reversed: false,
+    xl: false,
   },
   {
     title: "Loda Page",
@@ -29,44 +56,32 @@ const PROJECTS = [
     body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, quam ducimus odio eveniet expedita minus sapiente harum voluptatem repellat modi.",
     imageSrc: "https://picsum.photos/id/250/200/300",
     tech: ["Next.js", "TypeScript", "Tailwind"],
-    color: "red",
+    color: "grassy",
     href: "/projects/playful-landing",
     horizontal: true,
-    reversed: true
-  },
-  // {
-  //   title: "Playful Landing Page",
-  //   subtitle: "High-conversion layout experiments",
-  //   body: "I wanted to iterate on a landing page system where sections snap into place, CTA buttons feel responsive, and the visuals remain consistent across screen sizes. This became a mini design system.",
-  //   imageSrc: "https://cdn.shadcnstudio.com/ss-assets/components/card/image-2.png?height=280&format=auto",
-  //   tech: ["Next.js", "TypeScript", "Tailwind"],
-  //   color: "yellow",
-  //   href: "/projects/playful-landing",
-  //   horizontal: false,
-  //   reversed: false
-  // },
-    {
-    title: "Hee Hee Hee Haw",
-    subtitle: "ok",
-    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, quam ducimus odio eveniet expedita minus sapiente harum voluptatem repellat modi.",
-    imageSrc: "https://cdn.shadcnstudio.com/ss-assets/components/card/image-2.png?height=280&format=auto",
-    tech: ["Next.js", "TypeScript", "Tailwind"],
-    color: "mint",
-    href: "/projects/playful-landing",
-    horizontal: false,
-    reversed: false
-  },
+    reversed: true,
+    xl: true,
+  }
 ] as const;
 
 export default function Home() {
   return (
     <div className="pt-8">
       <div className="grid grid-cols-12 gap-6">
-        {PROJECTS.map((project, index) => (        
-          <div key={index} className={`${project.horizontal ? "md:col-span-8" : "md:col-span-4"} col-span-12`}>
-            <ProjectDisplayCard {...project} />
-          </div>
-        ))}
+        {PROJECTS.map((project, index) => {
+          const colSpan =
+            project.horizontal && project.xl
+              ? "md:col-span-12"
+              : project.horizontal
+              ? "md:col-span-8"
+              : "md:col-span-4";
+
+          return (
+            <div key={index} className={`${colSpan} col-span-12 animate-in ${index % 2 ? 'slide-in-from-right-4' : 'slide-in-from-left-4'} duration-500`}>
+              <ProjectDisplayCard {...project} />
+            </div>
+          );
+        })}
       </div>
     </div>
   );

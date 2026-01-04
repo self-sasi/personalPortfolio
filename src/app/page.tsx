@@ -13,7 +13,7 @@ export default function Home() {
         <div className="grid grid-cols-12 pt-8 gap-4">
 
           {/* about me card */}
-          <div className="col-span-12 md:col-span-6 lg:col-span-4">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4 animate-in slide-in-from-left-5 duration-500">
             <AboutCard />
           </div>
 
@@ -24,17 +24,17 @@ export default function Home() {
           {/* social media card  */}
           <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <div className="grid w-full grid-cols-12 gap-4">
-              <div className="col-span-12">
+              <div className="col-span-12 animate-in slide-in-from-right-5 duration-300">
                 <SkillCard />
               </div>
-              <div className="col-span-12">
+              <div className="col-span-12 animate-in slide-in-from-right-5 duration-500">
                 <SocialCard />
               </div>
             </div>
             
           </div>
 
-          <div className="col-span-12 md:col-span-2 lg:col-span-2">
+          <div className="col-span-12 md:col-span-2 lg:col-span-2 animate-in slide-in-from-left-5 duration-700">
             <ImageCard />
           </div>
 
@@ -42,19 +42,19 @@ export default function Home() {
             <ProjectCard />
           </div>
 
-          <div className="col-span-12 md:col-span-2 lg:col-span-2">
+          <div className="col-span-12 md:col-span-2 lg:col-span-2 animate-in slide-in-from-right-5 duration-700">
             <ImageCard />
           </div>
 
-          <div className="col-span-12 md:col-span-3 lg:col-span-3">
+          <div className="col-span-12 md:col-span-3 lg:col-span-3 animate-in slide-in-from-left-5 duration-900">
             <PhCard />
           </div>
 
-          <div className="col-span-12 md:col-span-3 lg:col-span-3">
+          <div className="col-span-12 md:col-span-3 lg:col-span-3 animate-in slide-in-from-bottom-5 duration-500">
             <ThemeCard />
           </div>
 
-          <div className="col-span-12 md:col-span-12 lg:col-span-6">
+          <div className="col-span-12 md:col-span-12 lg:col-span-6 animate-in slide-in-from-right-5 duration-900">
             <ExperienceCard />
           </div>
         </div>

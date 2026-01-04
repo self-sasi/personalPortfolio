@@ -25,7 +25,8 @@ type CardColor =
   | "red"
   | "indigo-vivid"
   | "pink-vivid"
-  | "mint";
+  | "mint"
+  | "grassy";
 
 type ProjectDisplayCardProps = {
   title: string;
@@ -37,7 +38,8 @@ type ProjectDisplayCardProps = {
   color: CardColor;
   href?: string;
   horizontal: boolean;
-  reversed: boolean;
+  reversed: boolean; // note to self: this only applies if horizontal is true
+  xl: boolean; // note to self: this only applies if horizontal is true
 };
 
 const COLOR_CLASS: Record<
@@ -132,6 +134,14 @@ const COLOR_CLASS: Record<
     badge:
       "border-primary-mint-foreground/30 text-primary-mint-foreground bg-transparent",
   },
+  grassy: {
+    bg: "bg-primary-grassy",
+    fg: "text-primary-grassy-foreground",
+    button:
+      "text-primary-grassy-foreground! border-primary-grassy-foreground! hover:bg-primary-grassy-foreground/20!",
+    badge:
+      "border-primary-grassy-foreground/30 text-primary-grassy-foreground bg-transparent",
+  }
 };
 
 export function ProjectDisplayCard({
@@ -145,6 +155,7 @@ export function ProjectDisplayCard({
   href,
   horizontal,
   reversed,
+  xl
 }: ProjectDisplayCardProps) {
   const c = COLOR_CLASS[color];
 
@@ -206,7 +217,7 @@ export function ProjectDisplayCard({
         <img
           src={imageSrc}
           alt="Banner"
-          className="w-full h-full object-cover block"
+          className={`w-full ${xl ? "aspect-video" : "h-full"} object-cover block`}
         />
       </div>
       <Card className={`w-1/2 ${reversed ? "rounded-r-none" : "rounded-l-none"} ${c.bg} ${c.fg}`}>
