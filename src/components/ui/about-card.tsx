@@ -30,12 +30,11 @@ export function AboutCard() {
       <CardContent className="flex-1">
         <p>
           I’m a CS major at UCalgary, passionate about developing software and
-          solving problems!
+          learning new things.
           <br/><br/>
-          Hello
+          I also love Shawarma. 🌯 😋
         </p>
       </CardContent>
-
       {/* <CardFooter></CardFooter> */}
     </Card>
   );

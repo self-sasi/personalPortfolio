@@ -26,7 +26,7 @@ export function SkillCard() {
           </Button>
         </CardAction>
         <CardDescription className="text-primary-turquoise-foreground/70!">
-            Stuff I know and I'm proficient in
+            What I work with and know well
         </CardDescription>
       </CardHeader>
     </Card>

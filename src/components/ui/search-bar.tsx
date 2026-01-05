@@ -21,7 +21,7 @@ export function SearchBar({
         onClick={onOpen}
         onFocus={onOpen}
         placeholder={placeholder}
-
+        className="border-2 light:border-gray-300 bg-secondary/70"
       />
 
       <div className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2">

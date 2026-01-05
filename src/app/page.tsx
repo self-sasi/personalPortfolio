@@ -6,6 +6,7 @@ import { ProjectCard } from "@/components/ui/project-card";
 import { SocialCard } from "@/components/ui/social-card";
 import { ThemeCard } from "@/components/ui/theme-card";
 import { PhCard } from "@/components/ui/ph-card";
+import { ContribCard } from "@/components/ui/contrib-card";
 
 export default function Home() {
 
@@ -18,7 +19,7 @@ export default function Home() {
           </div>
 
           <div className="col-span-12 md:col-span-6 lg:col-span-4">
-            <ThemeCard />
+            <ContribCard />
           </div>
 
           {/* social media card  */}
