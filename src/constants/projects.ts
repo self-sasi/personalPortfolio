@@ -1,4 +1,4 @@
-import { Project } from "@/types/project";
+import { Project, ProjectMiniView } from "@/types/project";
 
 export const PROJECTS : Project[] = [
   {
@@ -63,3 +63,11 @@ export const PROJECTS : Project[] = [
     xl: true,
   }
 ]
+
+export function getMiniView(project: Project) : ProjectMiniView {
+    return {
+        imageSrc: project.imageSrc,
+        imageAlt: project.imageAlt,
+        title: project.title
+    }
+}

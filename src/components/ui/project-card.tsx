@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRightIcon } from "lucide-react";
 import { ProjectCarousel } from "./project-carousel";
 import { useRouter } from "next/navigation";
+import { getMiniView, PROJECTS } from "@/constants/projects";
 
 export function ProjectCard() {
   const router = useRouter()
@@ -29,7 +30,7 @@ export function ProjectCard() {
       </CardHeader>
 
       <CardContent className="flex-1 flex justify-center p-0">
-        <ProjectCarousel/>
+        <ProjectCarousel projects={PROJECTS.map(project => getMiniView(project))}/>
       </CardContent>
 
       {/* <CardFooter></CardFooter> */}

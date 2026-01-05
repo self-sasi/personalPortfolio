@@ -19,11 +19,3 @@ export type ProjectMiniView = {
       imageSrc: string;
   imageAlt?: string;
 }
-
-export function getMiniView(project: Project) : ProjectMiniView {
-    return {
-        imageSrc: project.imageSrc,
-        imageAlt: project.imageAlt,
-        title: project.title
-    }
-}
