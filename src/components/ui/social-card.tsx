@@ -1,21 +1,14 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
+import { SOCIALS } from "@/constants/socials";
 import { SocialIcon } from "react-social-icons";
-
-const socials = [
-  { network: "github", url: "https://github.com/yourname" },
-  { network: "instagram", url: "https://instagram.com/yourname" },
-  { network: "discord", url: "https://discord.gg/yourinvite" },
-  { network: "x", url: "https://x.com/yourname" },
-  { network: "linkedin", url: "https://linkedin.com/in/yourname" },
-];
 
 export function SocialCard() {
   return (
     <Card className="h-full bg-primary-azure">
       <CardContent className="flex-1 flex justify-center items-center gap-2">
-        {socials.map(({ network, url }) => (
+        {SOCIALS.map(({ network, url }) => (
           <div
             key={network}
             className="
