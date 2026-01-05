@@ -18,7 +18,7 @@ export function ProjectCard() {
   const router = useRouter()
 
   return (
-    <Card className="bg-primary-tangerine text-primary-tangerine-foreground h-full">
+    <Card className="bg-primary-tangerine text-primary-tangerine-foreground h-full gap-0">
       <CardHeader>
         <CardTitle>Projects</CardTitle>
         <CardAction>
@@ -29,7 +29,7 @@ export function ProjectCard() {
         </CardAction>
       </CardHeader>
 
-      <CardContent className="flex-1 flex justify-center p-0">
+      <CardContent className="flex-1 flex justify-center py-0 px-6">
         <ProjectCarousel projects={PROJECTS.map(project => getMiniView(project))}/>
       </CardContent>
 

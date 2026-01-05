@@ -7,29 +7,40 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { ProjectMiniView } from "@/types/project";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip";
 
 type ProjectCarouselProps = {
   projects: ProjectMiniView[];
 };
 
-export function ProjectCarousel({projects}: ProjectCarouselProps) {
+export function ProjectCarousel({ projects }: ProjectCarouselProps) {
   return (
     <>
       {/* desktop and ipad */}
       <Carousel
         opts={{ align: "start" }}
-        className="w-full max-w-lg hidden md:block"
+        className="w-full max-w-xl hidden md:block"
       >
         <CarouselContent>
           {projects.map((project, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-              <div className="aspect-video relative size-full rounded-lg overflow-hidden">
+            <CarouselItem
+              key={index}
+              className="md:basis-1/2 lg:basis-1/3 cursor-pointer"
+            >
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <div className="aspect-[4/3] relative size-full rounded-lg overflow-hidden">
                     <img
                       src={project.imageSrc}
                       alt={project.imageAlt ?? ""}
-                      className="absolute size-full object-cover"
+                      className="absolute size-full object-cover transition-transform duration-300 ease-out hover:scale-[1.03]"
                     />
-              </div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{project.title}</p>
+                </TooltipContent>
+              </Tooltip>
             </CarouselItem>
           ))}
         </CarouselContent>
@@ -44,18 +55,25 @@ export function ProjectCarousel({projects}: ProjectCarouselProps) {
         orientation="vertical"
         className="w-full max-w-xs md:hidden mt-7"
       >
-        <CarouselContent className="-mt-1 h-[260px]">
+        <CarouselContent className="-mt-1 h-65">
           {projects.map((project, index) => (
-            <CarouselItem key={index} className="pt-1">
-              <div className="p-1">
-              <div className="aspect-video relative size-full rounded-lg overflow-hidden">
-                    <img
-                      src={project.imageSrc}
-                      alt={project.imageAlt ?? ""}
-                      className="absolute size-full object-cover"
-                    />
-              </div>
-              </div>
+            <CarouselItem key={index} className="pt-1 cursor-pointer">
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <div className="pt-3">
+                    <div className="aspect-video relative size-full rounded-lg overflow-hidden">
+                      <img
+                        src={project.imageSrc}
+                        alt={project.imageAlt ?? ""}
+                        className="absolute size-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{project.title}</p>
+                </TooltipContent>
+              </Tooltip>
             </CarouselItem>
           ))}
         </CarouselContent>
