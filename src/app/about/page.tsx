@@ -59,7 +59,7 @@ export default function AboutPage() {
           <div className="col-span-12 animate-in slide-in-from-top-5 duration-300">
             <Card className="h-full p-0 bg-primary-grassy text-primary-grassy-foreground rounded-t-none">
               <div className="flex-1 h-full">
-                <img className="w-full md:max-h-25" src={"/bob-pants.png"} />
+                <img className="w-full md:max-h-25" src={"/images/misc/bob-pants.png"} />
               </div>
             </Card>
           </div>
