@@ -69,7 +69,7 @@ export function ProjectDisplayCard({
           />
         </div>
 
-        <p className="text-sm leading-relaxed whitespace-pre-line">{body}</p>
+        <p className="text-sm xl:text-base leading-relaxed whitespace-pre-line">{body}</p>
       </CardContent>
 
       {/* Tech badges */}
@@ -121,7 +121,7 @@ export function ProjectDisplayCard({
 
         {/* Long description */}
         <CardContent className="pt-0 flex-1">
-          <p className="text-sm leading-relaxed whitespace-pre-line">{body}</p>
+          <p className="text-sm xl:text-base leading-relaxed whitespace-pre-line">{body}</p>
         </CardContent>
 
         {/* Tech badges */}

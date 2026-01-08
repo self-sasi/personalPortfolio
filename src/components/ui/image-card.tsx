@@ -5,7 +5,7 @@ export function ImageCard() {
   return (
     <Card className="relative h-full overflow-hidden">
       <Image
-        src="/mrbean.jpg"
+        src="/images/misc/mrbean.jpg"
         alt="Mr Bean"
         fill
         className="object-cover"

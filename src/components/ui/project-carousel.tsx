@@ -19,7 +19,7 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
       {/* desktop and ipad */}
       <Carousel
         opts={{ align: "start" }}
-        className="w-full max-w-xl hidden md:block"
+        className="w-full max-w-xl xl:max-w-3xl hidden md:block"
       >
         <CarouselContent>
           {projects.map((project, index) => (

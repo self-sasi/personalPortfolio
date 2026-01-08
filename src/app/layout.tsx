@@ -43,7 +43,7 @@ export default function RootLayout({
             <AppCommand open={open} onOpenChange={setOpen} />
 
             {/* content display div */}
-            <div className="mx-auto w-full max-w-6xl p-4">
+            <div className="mx-auto w-full max-w-6xl xl:max-w-7xl 2xl:max-w-screen-2xl p-4">
               {/* top search bar div  */}
               <div className="flex w-full justify-center">
                 <SearchBar
