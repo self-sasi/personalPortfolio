@@ -1,9 +1,13 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
-export function ImageCard() {
+type ImageCardProps = {
+  imageSrc: string;
+};
+
+export function ImageCard({imageSrc}: ImageCardProps) {
   return (
-    <Card className="relative h-60 md:h-full overflow-hidden">
-      <img src="/images/misc/mrbean.jpg" className="absolute inset-0 h-full w-full object-cover" />
+    <Card className="relative h-48 md:h-full overflow-hidden">
+      <img src={imageSrc} className="absolute inset-0 h-full w-full object-cover" />
     </Card>
   );
 }

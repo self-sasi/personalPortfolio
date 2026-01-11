@@ -90,9 +90,9 @@ export const PROJECTS : Project[] = [
 ]
 
 export function getMiniView(project: Project) : ProjectMiniView {
-    return {
-        imageSrc: project.imageSrc,
-        imageAlt: project.imageAlt,
-        title: project.title
-    }
+  return {
+      imageSrc: project.imageSrc,
+      imageAlt: project.imageAlt,
+      title: project.title
+  }
 }

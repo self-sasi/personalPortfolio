@@ -35,17 +35,23 @@ export default function Home() {
             
           </div>
 
-          <div className="col-span-12 md:col-span-2 lg:col-span-2 animate-in slide-in-from-left-5 duration-700">
-            <ImageCard />
+          <div className="col-span-6 md:col-span-2 lg:col-span-2 animate-in slide-in-from-left-5 duration-700">
+            <ImageCard imageSrc="/images/misc/mrbean.jpg"/>
+          </div>
+
+          <div className="col-span-6 md:hidden">
+            <ImageCard imageSrc="/images/misc/wow.gif"/>
           </div>
 
           <div className="col-span-12 md:col-span-12 lg:col-span-8">
             <ProjectCard />
           </div>
 
-          <div className="col-span-12 md:col-span-2 lg:col-span-2 animate-in slide-in-from-right-5 duration-700">
-            <ImageCard />
+          <div className="hidden md:block md:col-span-2 lg:col-span-2 animate-in slide-in-from-right-5 duration-700">
+            <ImageCard imageSrc="/images/misc/wow.gif"/>
           </div>
+
+          {/* /images/misc/wow.gif */}
 
           <div className="col-span-12 md:col-span-3 lg:col-span-3 animate-in slide-in-from-left-5 duration-900">
             <PhCard />
