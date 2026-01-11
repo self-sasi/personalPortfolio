@@ -35,7 +35,7 @@ export default function AboutPage() {
       </div>
 
       <div className="col-span-6 md:col-span-4 lg:col-span-3">
-        <ImageCard></ImageCard>
+        <ImageCard imageSrc="/images/misc/mrbean.jpg"></ImageCard>
       </div>
 
       <div className="col-span-6 md:col-span-4 lg:col-span-3">
