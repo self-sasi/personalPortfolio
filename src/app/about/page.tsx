@@ -10,6 +10,7 @@ import { ImageCard } from "@/components/ui/image-card";
 import {
   BookOpenIcon,
   BriefcaseIcon,
+  Glasses,
   GraduationCapIcon,
   HeartIcon,
   MapPinIcon,
@@ -23,19 +24,25 @@ export default function AboutPage() {
       <div className="col-span-12 md:col-span-8 lg:col-span-6">
         <Card className="bg-primary-mint text-primary-mint-foreground h-full">
           <CardHeader>
-            <CardTitle>Me</CardTitle>
+            <CardTitle className="text-base!">Me</CardTitle>
             <CardAction>
               <User />
             </CardAction>
           </CardHeader>
-          <CardContent className="flex-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, ex. Neque doloremque unde, dolore explicabo id voluptates inventore dolores, impedit eum cumque maxime vitae odio quas cupiditate! Rem repellat deleniti consequatur voluptas id? Error ea voluptatum repellendus perspiciatis facilis qui quas? Assumenda nesciunt sapiente, voluptates libero facilis asperiores repellat numquam!
+          <CardContent className="flex-1 text-sm!">
+            I am a fourth-year Computer Science student at the University of Calgary.
+            <br /><br />
+            I enjoy building things, especially products that have real impact, which is why I often work on personal projects. I have also recently started contributing to open-source projects.
+            <br /><br />
+            I also like building collaboratively; I believe there is a lot people can learn in group settings, so feel free to reach out for collaborations (I consider myself friendly).
+            <br /><br />
+            Outside of school and work, I enjoy eating and playing <a target="_blank" rel="noopener noreferrer" href="https://royaleapi.com/player/8GLGVL988" className="underline text-blue-800 transition-colors duration-150 hover:text-blue-500">Clash Royale</a>.
           </CardContent>
         </Card>
       </div>
 
-      <div className="col-span-6 md:col-span-4 lg:col-span-3">
-        <ImageCard imageSrc="/images/misc/mrbean.jpg"></ImageCard>
+      <div className="col-span-6 md:col-span-4 lg:col-span-3 [&_div]:h-full">
+        <ImageCard imageSrc="/images/misc/luffy-smiling.gif"></ImageCard>
       </div>
 
       <div className="col-span-6 md:col-span-4 lg:col-span-3">
@@ -57,22 +64,35 @@ export default function AboutPage() {
             </Card>
           </div>
           <div className="col-span-12 animate-in slide-in-from-top-5 duration-300">
-            <Card className="h-full p-0 bg-primary-grassy text-primary-grassy-foreground rounded-t-none">
-              <div className="flex-1 h-full">
-                <img className="w-full md:max-h-25" src={"/images/misc/bob-pants.png"} />
+            <Card className="h-full p-0 rounded-t-none">
+              <div className="flex-1 relative h-full">
+                <img
+                  src="/images/misc/bob-pants.png"
+                  className="h-full w-full object-cover"
+                />
               </div>
             </Card>
           </div>
         </div>
       </div>
 
-      <div className="col-span-6">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui asperiores quis explicabo neque, saepe blanditiis maxime natus. Blanditiis, nulla beatae?
+      <div className="col-span-12 md:col-span-8 lg:col-span-6" >
+        <Card className="bg-primary-tangerine text-primary-tangerine-foreground h-full">
+          <CardHeader>
+            <CardTitle className="text-base!">Current Focus</CardTitle>
+            <CardAction>
+              <Glasses />
+            </CardAction>
+          </CardHeader>
+          <CardContent className="flex-1 text-sm!">
+            These days I am taking a particular interest in Cloud Computing related topics like Container Orchestration (and more). By this I do not mean that I am interested in learning how to use such technology; rather, I am interested in learning how it does what it does.
+          </CardContent>
+        </Card>
       </div>
 
       <div className="col-span-12 md:col-span-6">
         <Card className="h-full overflow-hidden p-0">
-        <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/track/0umfaFH9whLN1JwyGw8ZyL?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="eager"></iframe>
+          <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/track/0umfaFH9whLN1JwyGw8ZyL?utm_source=generator" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="eager"></iframe>
         </Card>
       </div>
     </div>
