@@ -1,5 +1,6 @@
+"use client";
+
 import { ExerienceMiniVeiw } from "@/types/experience";
-import React from "react";
 
 export type HorizontalTimelineProps = {
     experiences: ExerienceMiniVeiw[];
