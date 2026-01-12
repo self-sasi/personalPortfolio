@@ -1,6 +1,6 @@
-import { Experience } from "@/types/experience";
+import { ExerienceMiniVeiw, Experience } from "@/types/experience";
 
-export const EXPERIENCES : Experience[] = [
+export const EXPERIENCES: Experience[] = [
     {
         role: "Software Development Engineer Intern",
         company: "Amazon",
@@ -30,5 +30,32 @@ export const EXPERIENCES : Experience[] = [
         technologies: ["Vue", "Flask", "Qiskit", "CVXPY", "SymPy", "SciPy"],
         icon: "pi-graduation-cap text-yellow-400",
         iconBg: "bg-red-600"
+    },
+]
+
+export const MINI_EXPERIENCES: ExerienceMiniVeiw[] = [
+    {
+        role: "RA",
+        company: "UofC",
+        period: "Summer '23",
+        icon: "pi-graduation-cap text-yellow-400",
+        iconBg: "bg-red-600",
+        ringBg: "ring-red-300/40"
+    },
+    {
+        role: "SWE Intern",
+        company: "OPG",
+        period: "Summer & Fall '24",
+        icon: "pi-bolt text-white",
+        iconBg: "bg-green-600",
+        ringBg: "ring-green-300/40"
+    },
+    {
+        role: "SDE Intern",
+        company: "Amazon",
+        period: "Summer '25",
+        icon: "pi-amazon text-white",
+        iconBg: "bg-primary-tangerine",
+        ringBg: "ring-orange-300/40"
     },
 ]

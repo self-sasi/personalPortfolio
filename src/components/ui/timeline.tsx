@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Experience } from "@/types/experience";
-import { Building, Building2, Building2Icon, Calendar, MapPin, Store } from "lucide-react";
+import { Calendar, MapPin} from "lucide-react";
 
 export type TimelineProps = {
   experiences: Experience[]

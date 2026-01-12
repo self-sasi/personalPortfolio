@@ -13,13 +13,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRightIcon } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import Timeline from "@/components/ui/timeline";
-import { EXPERIENCES } from "@/constants/experience";
+import { EXPERIENCES, MINI_EXPERIENCES } from "@/constants/experience";
+import HorizontalTimeline from "./horizontal-timeline";
 
 export function ExperienceCard() {
   return (
     <Dialog>
       {/* the card that is displayed on the page */}
-      <Card className="bg-primary-aqua text-primary-aqua-foreground h-full">
+      <Card className="bg-primary-aqua text-primary-aqua-foreground h-full gap-0">
         <CardHeader>
           <CardTitle>Experience</CardTitle>
           <CardAction>
@@ -31,12 +32,8 @@ export function ExperienceCard() {
           </CardAction>
         </CardHeader>
 
-        <CardContent className="flex-1">
-          <p>
-            I’m a CS major at UCalgary, passionate about developing software and
-            solving problems!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit autem at, hic veritatis, veniam accusamus optio sed nesciunt aliquid corporis voluptas expedita eveniet quam exercitationem fugiat consectetur perspiciatis minima. Animi amet doloribus recusandae corporis tempore quos dolore, nesciunt possimus pariatur non ipsum, quibusdam expedita fugiat dolor corrupti sequi impedit nulla!
-          </p>
+        <CardContent className="flex-1 p-0">
+          <HorizontalTimeline experiences={MINI_EXPERIENCES} />
         </CardContent>
 
       </Card>
