@@ -15,13 +15,14 @@ export default function Timeline({ experiences }: TimelineProps) {
 
         {experiences.map(
           (
-            { company, description, period, location, technologies, role },
+            { iconBg, icon, company, description, period, location, technologies, role },
             index
           ) => (
             <div key={index} className="relative pl-10 pb-12 last:pb-0">
               {/* Timeline Icon */}
-              <div className="absolute left-px -translate-x-1/2 h-9 w-9 flex items-center justify-center rounded-full bg-accent ring-8 ring-background">
+              <div className={`absolute left-px -translate-x-1/2 h-9 w-9 flex items-center justify-center rounded-full ${iconBg} ring-8 ring-background`}>
                 {/* <Building2Icon /> */}
+                <i className={`pi ${icon}`}></i>
               </div>
 
               {/* Content */}

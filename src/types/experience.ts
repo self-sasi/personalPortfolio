@@ -5,5 +5,6 @@ export type Experience = {
     period: string
     description: string
     technologies: string[],
-    icon: string
+    icon: string,
+    iconBg: string
 }

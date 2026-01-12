@@ -7,6 +7,7 @@ import { AppCommand } from "@/components/ui/app-command";
 import { SearchBar } from "@/components/ui/search-bar";
 import React from "react";
 import { ThemeSync } from "@/components/theme-sync";
+import "primeicons/primeicons.css";
 
 const nunitoSans = Nunito_Sans({ variable: "--font-sans" });
 

@@ -111,7 +111,7 @@ export function OpenSourceCard({ recentContribs }: OsDialogProps) {
           <CardTitle>Open Source Work</CardTitle>
         </CardHeader>
 
-        <CardContent className="px-6 py-3 m-0 grid grid-cols-12 gap-10">
+        <CardContent className="px-6 py-3 m-0 grid grid-cols-12 gap-10 overflow-scroll">
           <div className="col-span-12">
             <OsAccordion projects={CONTRIBUTIONS}></OsAccordion>
           </div>
