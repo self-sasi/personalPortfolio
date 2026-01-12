@@ -50,7 +50,8 @@ export function ProjectDisplayCard({
               className={`rounded-full cursor-pointer ${c.button}`}
               aria-label="Open project"
             >
-              <Link href={href}>
+              <Link href={href} target="_blank"
+                rel="noopener noreferrer">
                 <Github />
               </Link>
             </Button>
@@ -85,13 +86,13 @@ export function ProjectDisplayCard({
 
   const horizontalCard = (
     <Card className={`w-full h-full p-0 ${reversed ? "flex-row-reverse" : "flex-row"} gap-0`}>
-<div className="w-1/2 relative overflow-hidden">
-  <img
-    src={imageSrc}
-    alt="Banner"
-    className="absolute inset-0 h-full w-full object-cover"
-  />
-</div>
+      <div className="w-1/2 relative overflow-hidden">
+        <img
+          src={imageSrc}
+          alt="Banner"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      </div>
 
       <Card className={`w-1/2 ${reversed ? "rounded-r-none" : "rounded-l-none"} ${c.bg} ${c.fg}`}>
         <CardHeader>
@@ -111,7 +112,8 @@ export function ProjectDisplayCard({
                 className={`rounded-full cursor-pointer ${c.button}`}
                 aria-label="Open project"
               >
-                <Link href={href}>
+                <Link href={href} target="_blank"
+                  rel="noopener noreferrer">
                   <Github />
                 </Link>
               </Button>
