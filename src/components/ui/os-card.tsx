@@ -25,6 +25,7 @@ import { ArrowUpRightIcon, GitMerge, GitPullRequest, GitPullRequestArrow } from 
 import { OsAccordion } from "./os-accordian";
 import { OpenSourceProject } from "@/types/opensource";
 import { CONTRIBUTIONS, MINI_CONTRIBUTIONS } from "@/constants/opensource";
+import Link from "next/link";
 
 type Contrib = {
   merged: boolean;
@@ -36,7 +37,7 @@ type OsDialogProps = {
   recentContribs?: Contrib[];
 };
 
-export function PhCard({ recentContribs }: OsDialogProps) {
+export function OpenSourceCard({ recentContribs }: OsDialogProps) {
   const contribs: Contrib[] =
     recentContribs ??
     [
@@ -72,9 +73,14 @@ export function PhCard({ recentContribs }: OsDialogProps) {
             )}
 
             <div className="min-w-0 leading-tight">
-              <div className="text-sm underline cursor-pointer transition-colors duration-150 hover:text-blue-400">
+              <Link
+                href={contrib.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm underline transition-colors duration-150 hover:text-blue-600"
+              >
                 {contrib.pullRequestTitle}
-              </div>
+              </Link>
               <div className="text-xs opacity-70">
                 {contrib.status === "merged" ? "Merged" : "Open"}
               </div>

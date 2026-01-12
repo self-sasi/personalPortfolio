@@ -5,7 +5,7 @@ import { SkillCard } from "@/components/ui/skill-card";
 import { ProjectCard } from "@/components/ui/project-card";
 import { SocialCard } from "@/components/ui/social-card";
 import { ThemeCard } from "@/components/ui/theme-card";
-import { PhCard } from "@/components/ui/ph-card";
+import { OpenSourceCard } from "@/components/ui/os-card";
 import { ContribCard } from "@/components/ui/contrib-card";
 
 export default function Home() {
@@ -54,7 +54,7 @@ export default function Home() {
           {/* /images/misc/wow.gif */}
 
           <div className="col-span-12 md:col-span-3 lg:col-span-3 animate-in slide-in-from-left-5 duration-900">
-            <PhCard />
+            <OpenSourceCard />
           </div>
 
           <div className="col-span-12 md:col-span-3 lg:col-span-3 animate-in slide-in-from-bottom-5 duration-500">

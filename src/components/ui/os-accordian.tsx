@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import { GitMerge, GitPullRequest, GitPullRequestArrow } from "lucide-react";
 import { OpenSourceProject } from "@/types/opensource";
+import Link from "next/link";
 
 type OsAccordionProps = {
     projects: OpenSourceProject[];
@@ -19,25 +20,25 @@ export function OsAccordion({
     projects,
     defaultOpenProjectName,
 }: OsAccordionProps) {
-    const defaultValue = React.useMemo(() => {
-        if (!defaultOpenProjectName) return undefined;
-        const idx = projects.findIndex((p) => p.name === defaultOpenProjectName);
-        return idx >= 0 ? `project-${idx}` : undefined;
-    }, [projects, defaultOpenProjectName]);
+    // const defaultValue = React.useMemo(() => {
+    //     if (!defaultOpenProjectName) return undefined;
+    //     const idx = projects.findIndex((p) => p.name === defaultOpenProjectName);
+    //     return idx >= 0 ? `project-${idx}` : undefined;
+    // }, [projects, defaultOpenProjectName]);
 
-    if (!projects?.length) {
-        return (
-            <div className="text-sm opacity-80">
-                No open source contributions to display.
-            </div>
-        );
-    }
+    // if (!projects?.length) {
+    //     return (
+    //         <div className="text-sm opacity-80">
+    //             No open source contributions to display.
+    //         </div>
+    //     );
+    // }
 
     return (
         <Accordion
             type="single"
             collapsible
-            defaultValue={defaultValue}
+            defaultValue="project-0"
             className="w-full"
         >
             {projects.map((project, idx) => (
@@ -67,7 +68,14 @@ export function OsAccordion({
                                         )}
 
                                         <div className="min-w-0 leading-tight">
-                                            <div className="text-sm underline cursor-pointer transition-colors duration-150 hover:text-blue-400">{pr.title}</div>
+                                            <Link
+                                                href={pr.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-sm underline transition-colors! duration-150! hover:text-blue-400!"
+                                            >
+                                                {pr.title}
+                                            </Link>
                                             <div className="text-xs opacity-70">
                                                 {pr.status === "merged" ? "Merged" : "Open"}
                                             </div>
