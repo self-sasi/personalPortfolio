@@ -7,35 +7,70 @@ import {
   CardContent,
   CardAction,
   CardFooter,
+  CardDescription,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRightIcon } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import Timeline from "@/components/ui/timeline";
+import { EXPERIENCES } from "@/constants/experience";
 
 export function ExperienceCard() {
-  const router = useRouter()
-  
   return (
-    <Card className="bg-primary-aqua text-primary-aqua-foreground h-full">
-      <CardHeader>
-        <CardTitle>Experience</CardTitle>
-        <CardAction>
-          <Button variant="outline" size="icon" className="rounded-full text-primary-aqua-foreground!  border-primary-aqua-foreground! hover:bg-primary-aqua-foreground/20! cursor-pointer"
-          onClick={() => router.push('/experience')}>
-            <ArrowUpRightIcon />
-          </Button>
-        </CardAction>
-      </CardHeader>
+    <Dialog>
+      {/* the card that is displayed on the page */}
+      <Card className="bg-primary-aqua text-primary-aqua-foreground h-full">
+        <CardHeader>
+          <CardTitle>Experience</CardTitle>
+          <CardAction>
+            <DialogTrigger asChild>
+              <Button variant="outline" size="icon" className="rounded-full text-primary-aqua-foreground!  border-primary-aqua-foreground! hover:bg-primary-aqua-foreground/20! cursor-pointer">
+                <ArrowUpRightIcon />
+              </Button>
+            </DialogTrigger>
+          </CardAction>
+        </CardHeader>
 
-      <CardContent className="flex-1">
-        <p>
-          I’m a CS major at UCalgary, passionate about developing software and
-          solving problems!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit autem at, hic veritatis, veniam accusamus optio sed nesciunt aliquid corporis voluptas expedita eveniet quam exercitationem fugiat consectetur perspiciatis minima. Animi amet doloribus recusandae corporis tempore quos dolore, nesciunt possimus pariatur non ipsum, quibusdam expedita fugiat dolor corrupti sequi impedit nulla!
-        </p>
-      </CardContent>
+        <CardContent className="flex-1">
+          <p>
+            I’m a CS major at UCalgary, passionate about developing software and
+            solving problems!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit autem at, hic veritatis, veniam accusamus optio sed nesciunt aliquid corporis voluptas expedita eveniet quam exercitationem fugiat consectetur perspiciatis minima. Animi amet doloribus recusandae corporis tempore quos dolore, nesciunt possimus pariatur non ipsum, quibusdam expedita fugiat dolor corrupti sequi impedit nulla!
+          </p>
+        </CardContent>
 
-      {/* <CardFooter></CardFooter> */}
-    </Card>
+      </Card>
+
+      {/* the dialog box content */}
+      <DialogContent className="p-0 border-0 bg-transparent md:max-w-xl lg:max-w-3xl h-[80vh]">
+
+        <Card>
+
+          {/* the reason why this is needed is because the dialog header component is needed for screen reading 
+          purposes. next suggests to keep this hidden, which is what has been done :DD */}
+          <DialogHeader className="p-6 pb-0 hidden">
+            <DialogTitle>
+              Experience
+            </DialogTitle>
+            <DialogDescription>
+              More details about my professional experience.
+            </DialogDescription>
+          </DialogHeader>
+
+          <CardHeader>
+            <CardTitle>Experience</CardTitle>
+            <CardDescription className="text-sm!">Professional roles and organizations</CardDescription>
+          </CardHeader>
+
+          <CardContent className="px-6 w-full py-3 m-0 grid grid-cols-12 gap-10 overflow-y-auto p-0">
+            <div className="col-span-12 min-w-0 p-0">
+              <Timeline experiences={EXPERIENCES}/>
+            </div>
+
+          </CardContent>
+        </Card>
+
+      </DialogContent>
+    </Dialog>
   );
 }

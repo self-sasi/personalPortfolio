@@ -1,8 +1,9 @@
 export type Experience = {
+    role: string
     company: string,
-    logo: any,
     location: string,
-    role: string,
-    toFrom: string, // will look something like "Jan 2nd - May 25th"
+    period: string
     description: string
+    technologies: string[],
+    icon: string
 }
