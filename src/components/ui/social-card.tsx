@@ -12,23 +12,23 @@ export function SocialCard() {
           <div
             key={network}
             className="
-      flex items-center justify-center
-      basis-10
-      transition-[flex-basis]
-      duration-300
-      ease-in-out
-      hover:basis-14
-    "
+              flex items-center justify-center
+              basis-10
+              transition-[flex-basis]
+              duration-300
+              ease-in-out
+              hover:basis-14
+            "
           >
             <SocialIcon
               network={network}
               url={url}
               className="
-        transition-transform
-        duration-300
-        ease-in-out
-        hover:scale-110
-      "
+                transition-transform
+                duration-300
+                ease-in-out
+                hover:scale-110
+              "
             />
           </div>
         ))}
