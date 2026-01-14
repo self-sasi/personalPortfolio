@@ -1,4 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
+"use client";
+
 import {
   Carousel,
   CarouselContent,
@@ -8,12 +9,15 @@ import {
 } from "@/components/ui/carousel";
 import { ProjectMiniView } from "@/types/project";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./tooltip";
+import { useRouter } from "next/navigation";
 
 type ProjectCarouselProps = {
   projects: ProjectMiniView[];
 };
 
 export function ProjectCarousel({ projects }: ProjectCarouselProps) {
+  const router = useRouter();
+  
   return (
     <>
       {/* desktop and ipad */}
@@ -26,6 +30,7 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
             <CarouselItem
               key={index}
               className="md:basis-1/2 lg:basis-1/3 cursor-pointer"
+              onClick={()=>router.push('projects')}
             >
               <Tooltip>
                 <TooltipTrigger asChild>
@@ -57,7 +62,7 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
       >
         <CarouselContent className="-mt-1 h-65">
           {projects.map((project, index) => (
-            <CarouselItem key={index} className="pt-1 cursor-pointer">
+            <CarouselItem key={index} className="pt-1 cursor-pointer" onClick={()=>router.push('projects')}>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <div className="pt-3">
