@@ -17,7 +17,7 @@ export const CONTRIBUTIONS : OpenSourceProject[] = [
         pullRequests: [
             {
                 title: "refactor: Improve Go Report Card score (target: A+) by addressing static analysis findings",
-                status: "open",
+                status: "merged",
                 link: "https://github.com/Bharath-code/git-scope/pull/12"
             }
         ],
