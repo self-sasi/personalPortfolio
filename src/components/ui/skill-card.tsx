@@ -59,7 +59,7 @@ export function SkillCard() {
             </CardDescription>
           </CardHeader>
 
-          <CardContent className="px-6 m-0 grid grid-cols-12 gap-10 overflow-scroll">
+          <CardContent className="px-6 m-0 grid grid-cols-12 gap-10 overflow-scroll max-h-[70vh]">
             {SKILL_GROUPS.map((group) => (
               <div key={group.name} className="col-span-12">
                 <div className="flex items-center justify-between mb-3">
