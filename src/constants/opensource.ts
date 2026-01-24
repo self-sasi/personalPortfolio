@@ -20,8 +20,13 @@ export const CONTRIBUTIONS : OpenSourceProject[] = [
                 status: "open",
                 link: "https://github.com/facebook/pyrefly/pull/2217"
             },
+            {
+                title: "docs: fix relative pyrefly.org link in documentation",
+                status: "open",
+                link: "https://github.com/facebook/pyrefly/pull/2186"
+            }
         ],
-        numContribs: 1
+        numContribs: 2
     },
     {
         name: "git-scope",
