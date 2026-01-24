@@ -38,13 +38,6 @@ type OsDialogProps = {
 };
 
 export function OpenSourceCard({ recentContribs }: OsDialogProps) {
-  const contribs: Contrib[] =
-    recentContribs ??
-    [
-      { merged: true, project: "xyz", title: "add this that feature into this" },
-      { merged: false, project: "abd", title: "remove this that feature from this" },
-    ];
-
   return <Dialog>
     {/* the card that is displayed on the page */}
     <Card className="h-full bg-primary-lavender text-primary-lavender-foreground">
@@ -64,7 +57,7 @@ export function OpenSourceCard({ recentContribs }: OsDialogProps) {
         </CardAction>
       </CardHeader>
       <CardContent className="flex flex-col flex-1 gap-3">
-        {MINI_CONTRIBUTIONS.slice(0, 3).map((contrib, i) => (
+        {MINI_CONTRIBUTIONS.slice(0, 2).map((contrib, i) => (
           <div key={i} className="flex items-start gap-3">
             {contrib.status === "merged" ? (
               <GitMerge className="h-5 shrink-0 w-5 mt-2 text-purple-500" />
