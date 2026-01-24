@@ -13,6 +13,17 @@ export const CONTRIBUTIONS : OpenSourceProject[] = [
         numContribs: 1
     },
     {
+        name: "facebook/pyrefly",
+        pullRequests: [
+            {
+                title: "fix: make --remove-unused-ignores a no-op for files with no unused ignores",
+                status: "open",
+                link: "https://github.com/facebook/pyrefly/pull/2217"
+            },
+        ],
+        numContribs: 1
+    },
+    {
         name: "git-scope",
         pullRequests: [
             {
