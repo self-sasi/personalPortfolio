@@ -10,7 +10,7 @@ export default function Timeline({ experiences }: TimelineProps) {
   return (
     <div className="max-w-(--breakpoint-sm) mx-auto py-3 md:py-8 px-6">
       <div className="relative ml-4">
-        {/* Timeline line */}
+        {/* line */}
         <div className="absolute left-0 inset-y-0 border-l-2" />
 
         {experiences.map(
@@ -19,13 +19,12 @@ export default function Timeline({ experiences }: TimelineProps) {
             index
           ) => (
             <div key={index} className="relative pl-10 pb-12 last:pb-0">
-              {/* Timeline Icon */}
+              {/* icon */}
               <div className={`absolute left-px -translate-x-1/2 h-9 w-9 flex items-center justify-center rounded-full ${iconBg} ring-8 ring-background`}>
-                {/* <Building2Icon /> */}
                 <i className={`pi ${icon}`}></i>
               </div>
 
-              {/* Content */}
+              {/* content */}
               <div className="pt-2 sm:pt-1 space-y-3">
                 <p className="text-base font-medium">{company}</p>
                 <div>

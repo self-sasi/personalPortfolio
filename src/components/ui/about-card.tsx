@@ -6,7 +6,6 @@ import {
   CardTitle,
   CardContent,
   CardAction,
-  CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRightIcon } from "lucide-react";
@@ -35,7 +34,6 @@ export function AboutCard() {
           I also love Shawarma. 🌯 😋
         </p>
       </CardContent>
-      {/* <CardFooter></CardFooter> */}
     </Card>
   );
 }

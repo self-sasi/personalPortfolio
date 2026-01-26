@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import "@/components/ui/theme-button.css";
 import { useThemeActions } from "@/components/use-theme-actions";
 

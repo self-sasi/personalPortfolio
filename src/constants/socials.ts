@@ -1,6 +1,6 @@
 import { SocialIcon } from "@/types/social";
 
-export const SOCIALS : SocialIcon[] = [
+export const SOCIALS: SocialIcon[] = [
   { network: "github", url: "https://github.com/self-sasi" },
   { network: "instagram", url: "https://www.instagram.com/bifunction/" },
   { network: "discord", url: "https://discord.gg/lmao" },

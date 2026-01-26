@@ -6,7 +6,6 @@ import {
   CardTitle,
   CardContent,
   CardAction,
-  CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRightIcon } from "lucide-react";
@@ -32,8 +31,6 @@ export function ProjectCard() {
       <CardContent className="flex-1 flex justify-center py-0 px-6">
         <ProjectCarousel projects={PROJECTS.map(project => getMiniView(project))}/>
       </CardContent>
-
-      {/* <CardFooter></CardFooter> */}
     </Card>
   );
 }

@@ -2,11 +2,7 @@
 
 import {
   Card,
-  CardHeader,
-  CardTitle,
   CardContent,
-  CardAction,
-  CardFooter,
 } from "@/components/ui/card";
 import { ThemeButton } from "./theme-button";
 

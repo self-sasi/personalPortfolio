@@ -1,13 +1,12 @@
 "use client";
 
-import * as React from "react";
 import {
     Accordion,
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import { GitMerge, GitPullRequest, GitPullRequestArrow } from "lucide-react";
+import { GitMerge, GitPullRequestArrow } from "lucide-react";
 import { OpenSourceProject } from "@/types/opensource";
 import Link from "next/link";
 
@@ -20,20 +19,6 @@ export function OsAccordion({
     projects,
     defaultOpenProjectName,
 }: OsAccordionProps) {
-    // const defaultValue = React.useMemo(() => {
-    //     if (!defaultOpenProjectName) return undefined;
-    //     const idx = projects.findIndex((p) => p.name === defaultOpenProjectName);
-    //     return idx >= 0 ? `project-${idx}` : undefined;
-    // }, [projects, defaultOpenProjectName]);
-
-    // if (!projects?.length) {
-    //     return (
-    //         <div className="text-sm opacity-80">
-    //             No open source contributions to display.
-    //         </div>
-    //     );
-    // }
-
     return (
         <Accordion
             type="single"

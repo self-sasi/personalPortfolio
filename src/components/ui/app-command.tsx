@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import {useEffect} from "react";
 import {
   Command,
   CommandEmpty,
@@ -24,7 +24,7 @@ type AppCommandProps = {
 export function AppCommand({ open, onOpenChange }: AppCommandProps) {
   const router = useRouter();
   
-  React.useEffect(() => {
+  useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();

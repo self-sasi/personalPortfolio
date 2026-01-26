@@ -2,11 +2,7 @@
 
 import {
   Card,
-  CardAction,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { GitHubCalendar } from "react-github-calendar";
 
@@ -14,7 +10,6 @@ export function ContribCard() {
   return (
     <Card className="h-full bg-white">
       <CardContent className="flex-1 flex justify-center items-center text-black [&_div]:text-sm [&_div]:lg:text-base">
-        {/* <img src="https://ghchart.rshah.org/self-sasi"/> */}
         <GitHubCalendar
           username="self-sasi"
           blockMargin={2}

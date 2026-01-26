@@ -15,7 +15,7 @@ export type Project = {
 };
 
 export type ProjectMiniView = {
-      title: string;
-      imageSrc: string;
+  title: string;
+  imageSrc: string;
   imageAlt?: string;
 }
