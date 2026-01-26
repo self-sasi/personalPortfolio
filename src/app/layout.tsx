@@ -1,6 +1,6 @@
 "use client";
 
-import { Geist, Geist_Mono, Nunito_Sans } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AppCommand } from "@/components/ui/app-command";
@@ -8,8 +8,6 @@ import { SearchBar } from "@/components/ui/search-bar";
 import React from "react";
 import { ThemeSync } from "@/components/theme-sync";
 import "primeicons/primeicons.css";
-
-const nunitoSans = Nunito_Sans({ variable: "--font-sans" });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

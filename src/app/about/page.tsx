@@ -2,19 +2,13 @@ import {
   Card,
   CardAction,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { ImageCard } from "@/components/ui/image-card";
 import {
-  BookOpenIcon,
-  BriefcaseIcon,
   Glasses,
   GraduationCapIcon,
-  HeartIcon,
-  MapPinIcon,
-  SparklesIcon,
   User,
 } from "lucide-react";
 
