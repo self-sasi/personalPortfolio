@@ -1,6 +1,6 @@
 import { ContribMiniView, OpenSourceProject } from '@/types/opensource';
 
-export const CONTRIBUTIONS : OpenSourceProject[] = [
+export const CONTRIBUTIONS: OpenSourceProject[] = [
     {
         name: "kubernetes/minikube",
         pullRequests: [
@@ -16,14 +16,14 @@ export const CONTRIBUTIONS : OpenSourceProject[] = [
         name: "facebook/pyrefly",
         pullRequests: [
             {
-                title: "fix: make --remove-unused-ignores a no-op for files with no unused ignores",
-                status: "open",
-                link: "https://github.com/facebook/pyrefly/pull/2217"
+                title: "feat: make --remove-unused-ignores a no-op for files with no unused ignores",
+                status: "merged",
+                link: "https://github.com/self-sasi/pyrefly/commit/46a55b24629a0ce3ef2a5c52296916bc9aa1060c"
             },
             {
                 title: "docs: fix relative pyrefly.org link in documentation",
-                status: "open",
-                link: "https://github.com/facebook/pyrefly/pull/2186"
+                status: "merged",
+                link: "https://github.com/self-sasi/pyrefly/commit/bdac377cc379d82c492bc563e010fbcf7fd150d9"
             }
         ],
         numContribs: 2
@@ -41,27 +41,33 @@ export const CONTRIBUTIONS : OpenSourceProject[] = [
     }
 ]
 
-export const MINI_CONTRIBUTIONS : ContribMiniView[] = _toMiniView(CONTRIBUTIONS)
+const HIGHLIGHT_CONTRIBS: ContribMiniView[] = [
+    {
+        projectName: "facebook/pyrefly",
+        pullRequestTitle: "feat: make --remove-unused-ignores a no-op for files with no unused ignores",
+        status: "merged",
+        link: "https://github.com/self-sasi/pyrefly/commit/46a55b24629a0ce3ef2a5c52296916bc9aa1060c"
+    },
+    {
+        projectName: "kubernetes/minikube",
+        pullRequestTitle: "chore: replace deprecated pflag ParseErrorsWhitelist with ParseErrorsAllowlist",
+        status: "merged",
+        link: "https://github.com/kubernetes/minikube/issues/22419"
+    },
+]
 
-export function _toMiniView(projects: OpenSourceProject[]): ContribMiniView[] {
-  const miniViewArray: ContribMiniView[] = [];
+export const MINI_CONTRIBUTIONS: ContribMiniView[] = _normalizeMiniView(HIGHLIGHT_CONTRIBS)
 
-  for (const project of projects) {
-    for (const contrib of project.pullRequests) {
-      const words = contrib.title.trim().split(/\s+/);
-      const trimmedTitle =
-        words.length > 6
-          ? words.slice(0, 6).join(" ") + "..."
-          : contrib.title;
-
-      miniViewArray.push({
-        projectName: project.name,
-        pullRequestTitle: trimmedTitle,
-        status: contrib.status,
-        link: contrib.link,
-      });
-    }
-  }
-
-  return miniViewArray;
+function _normalizeMiniView(miniView: ContribMiniView[]): ContribMiniView[] {
+    return miniView.map(miniContrib => {
+        return {
+            projectName: miniContrib.projectName,
+            pullRequestTitle:
+                miniContrib.pullRequestTitle.length > 6
+                    ? miniContrib.pullRequestTitle.trim().split(/\s+/).slice(0, 6).join(" ") + "..."
+                    : miniContrib.pullRequestTitle,
+            status: miniContrib.status,
+            link: miniContrib.link
+        }
+    })
 }

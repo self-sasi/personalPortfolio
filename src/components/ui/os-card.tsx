@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import {
   Dialog,
   DialogContent,
@@ -14,30 +13,23 @@ import {
   Card,
   CardAction,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
-import { ArrowUpRightIcon, GitMerge, GitPullRequest, GitPullRequestArrow } from "lucide-react";
+import { ArrowUpRightIcon, GitMerge, GitPullRequestArrow } from "lucide-react";
 import { OsAccordion } from "./os-accordian";
-import { OpenSourceProject } from "@/types/opensource";
+import { ContribMiniView } from "@/types/opensource";
 import { CONTRIBUTIONS, MINI_CONTRIBUTIONS } from "@/constants/opensource";
 import Link from "next/link";
 
-type Contrib = {
-  merged: boolean;
-  project: string;
-  title: string;
-};
+export function OpenSourceCard() {
+  let mini_contribs : ContribMiniView[] = MINI_CONTRIBUTIONS;
+  if (MINI_CONTRIBUTIONS.length > 2) {
+    mini_contribs = MINI_CONTRIBUTIONS.slice(0, 2);
+  }
 
-type OsDialogProps = {
-  recentContribs?: Contrib[];
-};
-
-export function OpenSourceCard({ recentContribs }: OsDialogProps) {
   return <Dialog>
     {/* the card that is displayed on the page */}
     <Card className="h-full bg-primary-lavender text-primary-lavender-foreground">
@@ -57,7 +49,7 @@ export function OpenSourceCard({ recentContribs }: OsDialogProps) {
         </CardAction>
       </CardHeader>
       <CardContent className="flex flex-col flex-1 gap-3">
-        {MINI_CONTRIBUTIONS.slice(0, 2).map((contrib, i) => (
+        {mini_contribs.map((contrib, i) => (
           <div key={i} className="flex items-start gap-3">
             {contrib.status === "merged" ? (
               <GitMerge className="h-5 shrink-0 w-5 mt-2 text-purple-500" />
@@ -75,7 +67,7 @@ export function OpenSourceCard({ recentContribs }: OsDialogProps) {
                 {contrib.pullRequestTitle}
               </Link>
               <div className="text-xs opacity-70">
-                {contrib.status === "merged" ? "Merged" : "Open"}
+                {contrib.projectName} • {contrib.status === "merged" ? "Merged" : "Open"}
               </div>
             </div>
           </div>
