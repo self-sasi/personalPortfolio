@@ -18,12 +18,12 @@ export const CONTRIBUTIONS: OpenSourceProject[] = [
             {
                 title: "feat: make --remove-unused-ignores a no-op for files with no unused ignores",
                 status: "merged",
-                link: "https://github.com/self-sasi/pyrefly/commit/46a55b24629a0ce3ef2a5c52296916bc9aa1060c"
+                link: "https://github.com/facebook/pyrefly/commit/46a55b24629a0ce3ef2a5c52296916bc9aa1060c"
             },
             {
                 title: "docs: fix relative pyrefly.org link in documentation",
                 status: "merged",
-                link: "https://github.com/self-sasi/pyrefly/commit/bdac377cc379d82c492bc563e010fbcf7fd150d9"
+                link: "https://github.com/facebook/pyrefly/commit/bdac377cc379d82c492bc563e010fbcf7fd150d9"
             }
         ],
         numContribs: 2
@@ -46,7 +46,7 @@ const HIGHLIGHT_CONTRIBS: ContribMiniView[] = [
         projectName: "facebook/pyrefly",
         pullRequestTitle: "feat: make --remove-unused-ignores a no-op for files with no unused ignores",
         status: "merged",
-        link: "https://github.com/self-sasi/pyrefly/commit/46a55b24629a0ce3ef2a5c52296916bc9aa1060c"
+        link: "https://github.com/facebook/pyrefly/commit/46a55b24629a0ce3ef2a5c52296916bc9aa1060c"
     },
     {
         projectName: "kubernetes/minikube",

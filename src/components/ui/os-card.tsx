@@ -67,7 +67,7 @@ export function OpenSourceCard() {
                 {contrib.pullRequestTitle}
               </Link>
               <div className="text-xs opacity-70">
-                {contrib.projectName} • {contrib.status === "merged" ? "Merged" : "Open"}
+                {contrib.projectName} <span className="text-green-600 opacity-100 text-sm">⦿</span> {contrib.status === "merged" ? "Merged" : "Open"}
               </div>
             </div>
           </div>
