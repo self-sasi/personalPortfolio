@@ -21,12 +21,17 @@ export const CONTRIBUTIONS: OpenSourceProject[] = [
                 link: "https://github.com/facebook/pyrefly/commit/46a55b24629a0ce3ef2a5c52296916bc9aa1060c"
             },
             {
+                title: "docs: add pyrefly_graph to Code Layout section in README",
+                status: "merged",
+                link: "https://github.com/facebook/pyrefly/commit/d110c95690a0fb750e2ce750b2ed58c5b92d0562"
+            },
+            {
                 title: "docs: fix relative pyrefly.org link in documentation",
                 status: "merged",
                 link: "https://github.com/facebook/pyrefly/commit/bdac377cc379d82c492bc563e010fbcf7fd150d9"
             }
         ],
-        numContribs: 2
+        numContribs: 3
     },
     {
         name: "git-scope",
