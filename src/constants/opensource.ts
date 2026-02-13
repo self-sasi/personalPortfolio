@@ -28,17 +28,6 @@ export const CONTRIBUTIONS: OpenSourceProject[] = [
         numContribs: 4
     },
     {
-        name: "kubernetes/minikube",
-        pullRequests: [
-            {
-                title: "chore: replace deprecated pflag ParseErrorsWhitelist with ParseErrorsAllowlist",
-                status: "merged",
-                link: "https://github.com/kubernetes/minikube/issues/22419"
-            },
-        ],
-        numContribs: 1
-    },
-    {
         name: "google/magika",
         pullRequests: [
             {
@@ -51,6 +40,17 @@ export const CONTRIBUTIONS: OpenSourceProject[] = [
                 status: "merged",
                 link: "https://github.com/google/magika/pull/1274"
             }
+        ],
+        numContribs: 2
+    },
+    {
+        name: "kubernetes/minikube",
+        pullRequests: [
+            {
+                title: "chore: replace deprecated pflag ParseErrorsWhitelist with ParseErrorsAllowlist",
+                status: "merged",
+                link: "https://github.com/kubernetes/minikube/issues/22419"
+            },
         ],
         numContribs: 1
     },
