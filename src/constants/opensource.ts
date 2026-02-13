@@ -2,19 +2,13 @@ import { ContribMiniView, OpenSourceProject } from '@/types/opensource';
 
 export const CONTRIBUTIONS: OpenSourceProject[] = [
     {
-        name: "kubernetes/minikube",
-        pullRequests: [
-            {
-                title: "chore: replace deprecated pflag ParseErrorsWhitelist with ParseErrorsAllowlist",
-                status: "merged",
-                link: "https://github.com/kubernetes/minikube/issues/22419"
-            },
-        ],
-        numContribs: 1
-    },
-    {
         name: "facebook/pyrefly",
         pullRequests: [
+            {
+                title: "fix: avoid adding parameters for variables defined in the selection during helper extraction",
+                status: "merged",
+                link: "https://github.com/facebook/pyrefly/commit/82f3b2239a24ea6ac543367b95b82d4f625d1155"
+            },
             {
                 title: "feat: make --remove-unused-ignores a no-op for files with no unused ignores",
                 status: "merged",
@@ -31,7 +25,34 @@ export const CONTRIBUTIONS: OpenSourceProject[] = [
                 link: "https://github.com/facebook/pyrefly/commit/bdac377cc379d82c492bc563e010fbcf7fd150d9"
             }
         ],
-        numContribs: 3
+        numContribs: 4
+    },
+    {
+        name: "kubernetes/minikube",
+        pullRequests: [
+            {
+                title: "chore: replace deprecated pflag ParseErrorsWhitelist with ParseErrorsAllowlist",
+                status: "merged",
+                link: "https://github.com/kubernetes/minikube/issues/22419"
+            },
+        ],
+        numContribs: 1
+    },
+    {
+        name: "google/magika",
+        pullRequests: [
+            {
+                title: "web: add Homebrew install option to CLI installation tabs",
+                status: "merged",
+                link: "https://github.com/google/magika/pull/1275"
+            },
+            {
+                title: "docs: add Homebrew installation method for CLI",
+                status: "merged",
+                link: "https://github.com/google/magika/pull/1274"
+            }
+        ],
+        numContribs: 1
     },
     {
         name: "git-scope",
@@ -49,16 +70,16 @@ export const CONTRIBUTIONS: OpenSourceProject[] = [
 const HIGHLIGHT_CONTRIBS: ContribMiniView[] = [
     {
         projectName: "facebook/pyrefly",
+        pullRequestTitle: "fix: avoid adding parameters for variables defined in the selection during helper extraction",
+        status: "merged",
+        link: "https://github.com/facebook/pyrefly/commit/82f3b2239a24ea6ac543367b95b82d4f625d1155"
+    },
+    {
+        projectName: "facebook/pyrefly",
         pullRequestTitle: "feat: make --remove-unused-ignores a no-op for files with no unused ignores",
         status: "merged",
         link: "https://github.com/facebook/pyrefly/commit/46a55b24629a0ce3ef2a5c52296916bc9aa1060c"
-    },
-    {
-        projectName: "kubernetes/minikube",
-        pullRequestTitle: "chore: replace deprecated pflag ParseErrorsWhitelist with ParseErrorsAllowlist",
-        status: "merged",
-        link: "https://github.com/kubernetes/minikube/issues/22419"
-    },
+    }
 ]
 
 export const MINI_CONTRIBUTIONS: ContribMiniView[] = _normalizeMiniView(HIGHLIGHT_CONTRIBS)
