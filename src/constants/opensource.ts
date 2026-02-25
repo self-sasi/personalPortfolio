@@ -44,6 +44,17 @@ export const CONTRIBUTIONS: OpenSourceProject[] = [
         numContribs: 2
     },
     {
+        name: "open-telemetry/opentelemetry-java-instrumentation",
+        pullRequests: [
+            {
+                title: "refactor: standardize -common module (rxjava-3-common → rxjava-common-3.0)",
+                status: "open",
+                link: "https://github.com/open-telemetry/opentelemetry-java-instrumentation/pull/16284"
+            },
+        ],
+        numContribs: 1
+    },
+    {
         name: "kubernetes/minikube",
         pullRequests: [
             {
