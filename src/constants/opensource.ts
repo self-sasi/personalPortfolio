@@ -1,5 +1,8 @@
 import { ContribMiniView, OpenSourceProject } from '@/types/opensource';
 
+// TODO: implement a way to automate numContribs calculation. the change might require changing OpenSourceProject
+// type in @/types/opensource.
+
 export const CONTRIBUTIONS: OpenSourceProject[] = [
     {
         name: "facebook/pyrefly",
@@ -57,7 +60,7 @@ export const CONTRIBUTIONS: OpenSourceProject[] = [
                 link: "https://github.com/open-telemetry/opentelemetry-java-instrumentation/pull/16284"
             },
         ],
-        numContribs: 1
+        numContribs: 2
     },
     {
         name: "kubernetes/minikube",
