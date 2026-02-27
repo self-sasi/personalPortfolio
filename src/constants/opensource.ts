@@ -47,6 +47,11 @@ export const CONTRIBUTIONS: OpenSourceProject[] = [
         name: "open-telemetry/opentelemetry-java-instrumentation",
         pullRequests: [
             {
+                title: "refactor: migrate ktor-2-common module to updated -common module conventions",
+                status: "open",
+                link: "https://github.com/open-telemetry/opentelemetry-java-instrumentation/pull/16308"
+            },
+            {
                 title: "refactor: standardize -common module (rxjava-3-common → rxjava-common-3.0)",
                 status: "merged",
                 link: "https://github.com/open-telemetry/opentelemetry-java-instrumentation/pull/16284"
