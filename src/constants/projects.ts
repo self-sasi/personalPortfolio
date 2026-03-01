@@ -57,7 +57,7 @@ export const PROJECTS : Project[] = [
       "https://cdn.shadcnstudio.com/ss-assets/components/card/image-2.png?height=280&format=auto",
     tech: ["Java", "OpenTelmetry"],
     color: "red",
-    href: "/projects/playful-landing",
+    href: "https://github.com/self-sasi/melodebug",
     horizontal: false,
     reversed: false,
     xl: false,
