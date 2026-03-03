@@ -35,7 +35,7 @@ export const CONTRIBUTIONS: OpenSourceProject[] = [
         pullRequests: [
             {
                 title: "refactor: align graphql-java-common structure with naming convention",
-                status: "open",
+                status: "merged",
                 link: "https://github.com/open-telemetry/opentelemetry-java-instrumentation/pull/16341"
             },
             {
