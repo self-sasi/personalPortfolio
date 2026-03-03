@@ -31,6 +31,27 @@ export const CONTRIBUTIONS: OpenSourceProject[] = [
         numContribs: 4
     },
     {
+        name: "open-telemetry/opentelemetry-java-instrumentation",
+        pullRequests: [
+            {
+                title: "refactor: align graphql-java-common structure with naming convention",
+                status: "open",
+                link: "https://github.com/open-telemetry/opentelemetry-java-instrumentation/pull/16341"
+            },
+            {
+                title: "refactor: migrate ktor-2-common module to updated -common module conventions",
+                status: "merged",
+                link: "https://github.com/open-telemetry/opentelemetry-java-instrumentation/pull/16308"
+            },
+            {
+                title: "refactor: standardize -common module (rxjava-3-common → rxjava-common-3.0)",
+                status: "merged",
+                link: "https://github.com/open-telemetry/opentelemetry-java-instrumentation/pull/16284"
+            },
+        ],
+        numContribs: 3
+    },
+    {
         name: "google/magika",
         pullRequests: [
             {
@@ -43,22 +64,6 @@ export const CONTRIBUTIONS: OpenSourceProject[] = [
                 status: "merged",
                 link: "https://github.com/google/magika/pull/1274"
             }
-        ],
-        numContribs: 2
-    },
-    {
-        name: "open-telemetry/opentelemetry-java-instrumentation",
-        pullRequests: [
-            {
-                title: "refactor: migrate ktor-2-common module to updated -common module conventions",
-                status: "merged",
-                link: "https://github.com/open-telemetry/opentelemetry-java-instrumentation/pull/16308"
-            },
-            {
-                title: "refactor: standardize -common module (rxjava-3-common → rxjava-common-3.0)",
-                status: "merged",
-                link: "https://github.com/open-telemetry/opentelemetry-java-instrumentation/pull/16284"
-            },
         ],
         numContribs: 2
     },
