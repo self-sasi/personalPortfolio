@@ -54,7 +54,7 @@ export const CONTRIBUTIONS: OpenSourceProject[] = [
                 link: "https://github.com/open-telemetry/opentelemetry-java-instrumentation/pull/16284"
             },
         ],
-        numContribs: 3
+        numContribs: 4
     },
     {
         name: "google/magika",
