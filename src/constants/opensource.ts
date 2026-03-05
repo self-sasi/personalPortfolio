@@ -35,7 +35,7 @@ export const CONTRIBUTIONS: OpenSourceProject[] = [
         pullRequests: [
             {
                 title: "refactor: restructure servlet-javax-common to match common module convention",
-                status: "open",
+                status: "merged",
                 link: "https://github.com/open-telemetry/opentelemetry-java-instrumentation/pull/16373"
             },
             {
