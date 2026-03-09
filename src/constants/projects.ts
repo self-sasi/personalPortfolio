@@ -52,7 +52,7 @@ export const PROJECTS : Project[] = [
   {
     title: "Melodebug",
     subtitle: "A java agent that instruments application performance and sonifies it in real time",
-    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, quam ducimus odio eveniet expedita minus sapiente harum voluptatem repellat modi.",
+    body: "Made for fun debugging, melodebug is shipped as a java agent that users can attach to their JVM to gain insights on their application's performance. The agent opens a dialog box which plays different music based on application performance trends. Melodebug also ships an API & SPI that allow developers to create melo-extensions for modifying the agent’s behavior.",
     imageSrc:
       "https://cdn.shadcnstudio.com/ss-assets/components/card/image-2.png?height=280&format=auto",
     tech: ["Java", "OpenTelmetry"],
