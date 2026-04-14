@@ -63,7 +63,7 @@ export const MINI_EXPERIENCES: ExerienceMiniVeiw[] = [
         company: "Google",
         period: "Fall '26",
         icon: "pi-google text-white",
-        iconBg: "bg-gradient-to-r from-[#4285F4] via-[#EA4335] via-[#FBBC05] to-[#34A853]",
-        ringBg: "ring-[#4285F4]/40"
+        iconBg: "bg-[#4285F4]",
+        ringBg: "ring-[#4285F4]/30"
     },
 ]
